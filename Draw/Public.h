@@ -8,20 +8,19 @@
 
 
 
-#ifdef Infra_Draw_Module
-#define Infra_Draw_Api __declspec(dllexport)
+#ifdef Draw_Module
+#define Draw_Api __declspec(dllexport)
 #else
-#define Infra_Draw_Api __declspec(dllimport)
+#define Draw_Api __declspec(dllimport)
 #endif
 
 
 
 
-
-InfraObjectApi(Infra_Draw, Draw)
-
+ObjectApi(Draw, Draw)
 
 
 
-Infra_Draw_Api
+
+Draw_Api
 Object Draw_Color(Object this, Int color, Object rect);

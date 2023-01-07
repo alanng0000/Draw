@@ -2,7 +2,7 @@
 
 
 
-InfraClassNew(Draw)
+ClassNew(Draw)
 
 
 
