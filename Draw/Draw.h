@@ -9,5 +9,7 @@
 
 typedef struct
 {
-    Bool B;
+    Int32* PixelList;
+    
+    Object Size;
 } Draw;
