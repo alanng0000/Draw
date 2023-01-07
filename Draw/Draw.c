@@ -2,7 +2,8 @@
 
 
 
-ClassNew(Draw)
+
+ClassNew(Draw, Draw)
 
 
 
