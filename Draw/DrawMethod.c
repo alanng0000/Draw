@@ -27,6 +27,33 @@ Int32 alphaMax = 255;
 
 
 
+Bool Draw_Method_Init()
+{
+    bufferPixelByteCount = sizeof(Int32);
+
+
+    bitsPerByte = 8;
+
+
+    alphaShift = bitsPerByte * 3;
+
+    redShift = bitsPerByte * 2;
+
+    greenShift = bitsPerByte * 1;
+
+    blueShift = bitsPerByte * 0;
+
+
+    alphaMax = 255;
+
+
+
+    return true;
+}
+
+
+
+
 
 void Draw_Method_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
 {
