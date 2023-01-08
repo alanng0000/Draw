@@ -111,8 +111,8 @@ void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol
 
 
 
-void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
-    Int32 posRow, Int32 posCol, Int64 pixelPointer, Int32 pixelStride)
+void Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
+    Int32 posRow, Int32 posCol, Byte* pixelPointer, Int32 pixelStride)
 {
     Int32 bufferPixelByteCount = sizeof(Int32);
 
@@ -133,12 +133,6 @@ void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol
 
 
 
-    Byte* p;
-    p = (Byte*)bufferPointer;
-
-
-    Byte* m;
-    m = (Byte*)pixelPointer;
 
 
     Int32 i;
@@ -160,7 +154,7 @@ void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol
 
 
             Byte* u;
-            u = p + row * bufferStride + col * bufferPixelByteCount;
+            u = bufferPointer + row * bufferStride + col * bufferPixelByteCount;
 
 
             Int32* d;
@@ -180,7 +174,7 @@ void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol
 
 
             Byte* n;
-            n = m + mRow * pixelStride + mCol * bufferPixelByteCount;
+            n = pixelPointer + mRow * pixelStride + mCol * bufferPixelByteCount;
 
 
             Int32* o;
