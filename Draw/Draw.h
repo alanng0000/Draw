@@ -12,4 +12,5 @@ typedef struct
     Int32* PixelList;
     
     Object Size;
-} Draw;
+} 
+Draw_Draw;
