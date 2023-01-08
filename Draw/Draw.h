@@ -13,4 +13,4 @@ typedef struct
     
     Object Size;
 } 
-Draw_Draw;
+Draw;

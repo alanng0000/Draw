@@ -30,7 +30,7 @@ Bool Draw_Draw_Final(Object this)
 
 Int Draw_Draw_GetPixelList(Object this)
 {
-    Draw_Draw* m;
+    Draw* m;
 
     m = CastPointer(this);
 
@@ -55,7 +55,7 @@ Int Draw_Draw_GetPixelList(Object this)
 
 Bool Draw_Draw_SetPixelList(Object this, Int value)
 {
-    Draw_Draw* m;
+    Draw* m;
 
 
     m = CastPointer(this);
@@ -85,7 +85,7 @@ Bool Draw_Draw_SetPixelList(Object this, Int value)
 
 Object Draw_Draw_GetSize(Object this)
 {
-    Draw_Draw* m;
+    Draw* m;
 
 
     m = CastPointer(this);
@@ -101,7 +101,7 @@ Object Draw_Draw_GetSize(Object this)
 
 Bool Draw_Draw_SetSize(Object this, Object value)
 {
-    Draw_Draw* m;
+    Draw* m;
 
 
     m = CastPointer(this);
