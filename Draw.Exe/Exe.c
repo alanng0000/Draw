@@ -8,7 +8,27 @@ int main(int argc, char* argv[])
     Infra_Form_Init();
 
 
+    Draw_Init();
 
+
+
+
+    Object draw;
+
+    draw = Draw_Draw_New();
+
+
+
+    Draw_Draw_Init(draw);
+
+
+
+    Draw_Draw_Final(draw);
+    
+
+
+
+    Draw_Draw_Delete(draw);
 
 
 
