@@ -27,7 +27,7 @@ CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" ""
 SET Module=Draw.Exe
 
 
-CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Draw.lib" exe
+CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Draw.lib %OutFold%\Infra.lib" exe
 
 
 
