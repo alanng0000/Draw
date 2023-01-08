@@ -4,7 +4,7 @@ typedef unsigned char Byte;
 
 
 
-void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rectRow, Int32 rectWidth, Int32 rectHeight, Int32 color)
+void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
 {
     Int32 bufferPixelByteCount = sizeof(Int32);
 
@@ -57,12 +57,12 @@ void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rect
             row = rectRow + i;
 
 
-            Int32 column;
-            column = rectColumn + j;
+            Int32 col;
+            col = rectCol + j;
 
 
             Byte* u;
-            u = bufferPointer + row * bufferStride + column * bufferPixelByteCount;
+            u = bufferPointer + row * bufferStride + col * bufferPixelByteCount;
 
 
             Int32* d;
