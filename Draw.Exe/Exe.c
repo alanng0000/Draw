@@ -3,6 +3,73 @@
 
 
 
+
+Bool ConsoleWrite(Int o)
+{
+    Int length;
+
+    length = String_ConstantLength(o);
+
+
+
+    Object s;
+
+
+    s = String_New();
+
+
+    String_Init(s);
+
+
+    String_SetLength(s, length);
+
+
+    String_SetData(s, o);
+
+    
+
+
+
+
+
+    Object console;
+
+    console = Console_New();
+
+
+
+    Console_Init(console);
+
+
+
+    Console_Write(console, s);
+
+
+
+    Console_Final(console);
+
+
+
+    Console_Delete(console);
+
+
+
+
+
+
+    String_Final(s);
+
+
+    String_Delete(s);
+
+
+
+    return true;
+}
+
+
+
+
 int main(int argc, char* argv[])
 {
     Draw_Method_Init();
@@ -45,15 +112,30 @@ int main(int argc, char* argv[])
 
 
     
+    Int successU;
+
+
+    successU = CastInt("DEMO SUCCESS\n");
+
+
+    Int errorU;
+
+    errorU = CastInt("DEMO ERROR\n");
+
+
+
+
     Int u;
-
-
-    u = CastInt("DEMO SUCCESS\n");
-
 
 
 
     Bool b;
+
+
+
+
+    u = successU;
+
 
 
     b = (a == 0x00ffff00);
@@ -61,72 +143,46 @@ int main(int argc, char* argv[])
 
     if (!b)
     {
-        u = CastInt("DEMO ERROR\n");
+        u = errorU;
     }
 
 
 
 
-
-    
-
-
-
-    Int length;
-
-    length = String_ConstantLength(u);
-
-
-
-    Object s;
-
-
-    s = String_New();
-
-
-    String_Init(s);
-
-
-    String_SetLength(s, length);
-
-
-    String_SetData(s, u);
-
+    ConsoleWrite(u);
     
 
 
 
 
 
-    Object console;
-
-    console = Console_New();
+    color = 0x0000ffff;
 
 
-
-    Console_Init(console);
-
-
-
-    Console_Write(console, s);
-
-
-
-    Console_Final(console);
-
-
-
-    Console_Delete(console);
+    Draw_Method_OpaqueColor(bufferPointer, bufferStride, 0, 0, 1, 1, color);
 
 
 
 
+    
+    u = successU;
 
 
-    String_Final(s);
+
+    b = (a == 0x0000ffff);
 
 
-    String_Delete(s);
+
+    if (!b)
+    {
+        u = errorU;
+    }
+
+
+
+
+    ConsoleWrite(u);
+
 
 
 
