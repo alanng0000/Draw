@@ -8,4 +8,4 @@
 
 
 
-void Draw_Method_Init();
+#include "Method.h"
