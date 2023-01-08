@@ -4,7 +4,7 @@ typedef unsigned char Byte;
 
 
 
-void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
+void DrawMethod_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
 {
     Int32 bufferPixelByteCount = sizeof(Int32);
 
@@ -111,7 +111,7 @@ void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol
 
 
 
-void Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
+void DrawMethod_Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
     Int32 posRow, Int32 posCol, Byte* pixelPointer, Int32 pixelStride)
 {
     Int32 bufferPixelByteCount = sizeof(Int32);
