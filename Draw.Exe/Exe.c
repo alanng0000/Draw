@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 
     Int32 color;
 
-    color = 0x00ffff00;
+    color = 0xffffff00;
 
 
 
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 
 
 
-    if (!(a == color))
+    if (!(a == 0x00ffff00))
     {
         return 1;
     }
@@ -53,9 +53,9 @@ int main(int argc, char* argv[])
 
 
 
-    Object u;
+    Int u;
 
-    u = CastInt("DEMO SUCCESS");
+    u = CastInt("DEMO SUCCESS\n");
 
 
 
@@ -67,16 +67,19 @@ int main(int argc, char* argv[])
 
     Object s;
 
+
     s = String_New();
 
 
     String_Init(s);
 
 
+    String_SetLength(s, length);
+
 
     String_SetData(s, u);
 
-    String_SetLength(s, length);
+    
 
 
 
