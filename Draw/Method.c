@@ -111,8 +111,8 @@ void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol
 
 
 
-void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rectRow, Int32 rectWidth, Int32 rectHeight, 
-    Int32 posColumn, Int32 posRow, Int64 pixelsPointer, Int32 pixelsStride)
+void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
+    Int32 posRow, Int32 posCol, Int64 pixelPointer, Int32 pixelStride)
 {
     Int32 bufferPixelByteCount = sizeof(Int32);
 
@@ -138,7 +138,7 @@ void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rect
 
 
     Byte* m;
-    m = (Byte*)pixelsPointer;
+    m = (Byte*)pixelPointer;
 
 
     Int32 i;
@@ -155,12 +155,12 @@ void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rect
             row = rectRow + i;
 
 
-            Int32 column;
-            column = rectColumn + j;
+            Int32 col;
+            col = rectCol + j;
 
 
             Byte* u;
-            u = p + row * bufferStride + column * bufferPixelByteCount;
+            u = p + row * bufferStride + col * bufferPixelByteCount;
 
 
             Int32* d;
@@ -175,12 +175,12 @@ void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rect
             mRow = posRow + i;
 
 
-            Int32 mColumn;
-            mColumn = posColumn + j;
+            Int32 mCol;
+            mCol = posCol + j;
 
 
             Byte* n;
-            n = m + mRow * pixelsStride + mColumn * bufferPixelByteCount;
+            n = m + mRow * pixelStride + mCol * bufferPixelByteCount;
 
 
             Int32* o;
