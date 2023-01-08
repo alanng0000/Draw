@@ -114,22 +114,22 @@ void Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rect
 void Image(Int64 bufferPointer, Int32 bufferStride, Int32 rectColumn, Int32 rectRow, Int32 rectWidth, Int32 rectHeight, 
     Int32 posColumn, Int32 posRow, Int64 pixelsPointer, Int32 pixelsStride)
 {
-    const Int32 bufferPixelByteCount = sizeof(Int32);
+    Int32 bufferPixelByteCount = sizeof(Int32);
 
 
-    const Int32 bitsPerByte = 8;
+    Int32 bitsPerByte = 8;
 
 
-    const Int32 alphaShift = bitsPerByte * 3;
+    Int32 alphaShift = bitsPerByte * 3;
 
-    const Int32 redShift = bitsPerByte * 2;
+    Int32 redShift = bitsPerByte * 2;
 
-    const Int32 greenShift = bitsPerByte * 1;
+    Int32 greenShift = bitsPerByte * 1;
 
-    const Int32 blueShift = bitsPerByte * 0;
+    Int32 blueShift = bitsPerByte * 0;
 
 
-    const Int32 alphaMax = 255;
+    Int32 alphaMax = 255;
 
 
 
