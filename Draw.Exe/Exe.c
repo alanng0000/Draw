@@ -49,19 +49,19 @@ int main(int argc, char* argv[])
     {
         return 1;
     }
-    
 
 
 
-    Object p;
 
-    p = CastInt("DEMO SUCCESS");
+    Object u;
+
+    u = CastInt("DEMO SUCCESS");
 
 
 
     Int length;
 
-    length = String_ConstantLength(p);
+    length = String_ConstantLength(u);
 
 
 
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 
 
 
-    String_SetData(s, p);
+    String_SetData(s, u);
 
     String_SetLength(s, length);
 
