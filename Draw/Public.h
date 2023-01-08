@@ -22,6 +22,8 @@ void Draw_Method_Init();
 
 
 
+
+
 Draw_Api
 void Draw_Method_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color);
 
