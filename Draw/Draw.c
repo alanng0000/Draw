@@ -130,7 +130,7 @@ Object Draw_Color(Object this, Int color, Object rect)
     Int32* pixelList;
 
     pixelList = CastPointer(o);
-    
+
 
 
 
@@ -185,14 +185,14 @@ Object Draw_Color(Object this, Int color, Object rect)
 
     Int rectWidth;
 
-    rectWidth = Size_GetWidth(rectSize)
+    rectWidth = Size_GetWidth(rectSize);
     
 
 
 
     Int rectHeight;
 
-    rectHeight = Size_GetHeight(rectSize)
+    rectHeight = Size_GetHeight(rectSize);
     
 
 
