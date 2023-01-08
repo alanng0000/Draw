@@ -121,5 +121,78 @@ Bool Draw_SetSize(Object this, Object value)
 
 Object Draw_Color(Object this, Int color, Object rect)
 {
+    Int32* pixelList;
+
+    pixelList = Draw_GetPixelList(this);
+
+
+
+    Object size;
+
+    size = Draw_GetSize(this);
+
+
+
+    Int pixelWidth;
+
+    pixelWidth = Size_GetWidth(size);
+
+
+    Int pixelHeight;
+
+    pixelHeight = Size_GetHeight(size);
+    
+
+
+    Int32 c;
+
+
+    c = (Int32)color;
+
+
+
+    Object rectPos;
+
+    rectPos = Rect_GetPos(rect);
+
+
+    Object rectSize;
+
+    rectSize = Rect_GetSize(rect);
+
+
+
+
+    Int rectLeft;
+
+    rectLeft = Pos_GetLeft(rectPos);
+
+
+    Int rectUp;
+
+    rectUp = Pos_GetUp(rectPos);
+
+
+
+
+    Int rectWidth;
+
+    rectWidth = Size_GetWidth(rectSize)
+    
+
+
+
+    Int rectHeight;
+
+    rectHeight = Size_GetHeight(rectSize)
+    
+
+
+
+
+    
+
+
+
     return null;
 }
