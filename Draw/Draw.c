@@ -11,7 +11,7 @@ ClassNew(Draw, Draw)
 
 
 
-Bool Draw_Init(Object this)
+Bool Draw_Draw_Init(Object this)
 {
     return true;
 }
@@ -19,7 +19,7 @@ Bool Draw_Init(Object this)
 
 
 
-Bool Draw_Final(Object this)
+Bool Draw_Draw_Final(Object this)
 {
     return true;
 }
@@ -28,7 +28,7 @@ Bool Draw_Final(Object this)
 
 
 
-Int Draw_GetPixelList(Object this)
+Int Draw_Draw_GetPixelList(Object this)
 {
     Draw* m;
 
@@ -53,7 +53,7 @@ Int Draw_GetPixelList(Object this)
 
 
 
-Bool Draw_SetPixelList(Object this, Int value)
+Bool Draw_Draw_SetPixelList(Object this, Int value)
 {
     Draw* m;
 
@@ -83,7 +83,7 @@ Bool Draw_SetPixelList(Object this, Int value)
 
 
 
-Object Draw_GetSize(Object this)
+Object Draw_Draw_GetSize(Object this)
 {
     Draw* m;
 
@@ -99,7 +99,7 @@ Object Draw_GetSize(Object this)
 
 
 
-Bool Draw_SetSize(Object this, Object value)
+Bool Draw_Draw_SetSize(Object this, Object value)
 {
     Draw* m;
 
@@ -119,11 +119,11 @@ Bool Draw_SetSize(Object this, Object value)
 
 
 
-Object Draw_Color(Object this, Int color, Object rect)
+Object Draw_Draw_Color(Object this, Int color, Object rect)
 {
     Int o;
     
-    o = Draw_GetPixelList(this);
+    o = Draw_Draw_GetPixelList(this);
 
 
 
@@ -137,7 +137,7 @@ Object Draw_Color(Object this, Int color, Object rect)
 
     Object size;
 
-    size = Draw_GetSize(this);
+    size = Draw_Draw_GetSize(this);
 
 
 
