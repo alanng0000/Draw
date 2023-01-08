@@ -44,18 +44,31 @@ int main(int argc, char* argv[])
 
 
 
+    
+    Int u;
 
-    if (!(a == 0x00ffff00))
+
+    u = CastInt("DEMO SUCCESS\n");
+
+
+
+
+    Bool b;
+
+
+    b = (a == 0x00ffff00);
+
+
+    if (!b)
     {
-        return 1;
+        u = CastInt("DEMO ERROR\n");
     }
 
 
 
 
-    Int u;
 
-    u = CastInt("DEMO SUCCESS\n");
+    
 
 
 
