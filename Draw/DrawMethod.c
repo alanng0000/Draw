@@ -6,22 +6,22 @@ typedef unsigned char Byte;
 
 
 
-Int32 bufferPixelByteCount = sizeof(Int32);
+Int32 bufferPixelByteCount;
 
 
-Int32 bitsPerByte = 8;
+Int32 bitsPerByte;
 
 
-Int32 alphaShift = bitsPerByte * 3;
+Int32 alphaShift;
 
-Int32 redShift = bitsPerByte * 2;
+Int32 redShift;
 
-Int32 greenShift = bitsPerByte * 1;
+Int32 greenShift;
 
-Int32 blueShift = bitsPerByte * 0;
+Int32 blueShift;
 
 
-Int32 alphaMax = 255;
+Int32 alphaMax;
 
 
 
