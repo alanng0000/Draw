@@ -138,6 +138,57 @@ void Draw_Method_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, I
 
 
 
+
+
+void Draw_Method_OpaqueColor(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
+{
+    Int32 i;
+    i = 0;
+
+    while (i < rectHeight)
+    {
+        Int32 j;
+        j = 0;
+
+        while (j < rectWidth)
+        {
+            Int32 row;
+            row = rectRow + i;
+
+
+            Int32 col;
+            col = rectCol + j;
+
+
+            Byte* u;
+            u = bufferPointer + row * bufferStride + col * bufferPixelByteCount;
+
+
+            Int32* d;
+            d = (Int32*)u;
+
+
+
+            *d = color;
+
+
+
+
+            j = j + 1;
+        }
+
+
+        i = i + 1;
+    }
+}
+
+
+
+
+
+
+
+
 void Draw_Method_Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
     Int32 posRow, Int32 posCol, Byte* pixelPointer, Int32 pixelStride)
 {
