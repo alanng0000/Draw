@@ -48,3 +48,10 @@ Bool Draw_SetSize(Object this, Object value);
 
 Draw_Api
 Object Draw_Color(Object this, Int color, Object rect);
+
+
+
+
+
+Draw_Api
+Bool Draw_Init();

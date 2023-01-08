@@ -1,6 +1,4 @@
-typedef unsigned int Int32;
-
-typedef unsigned char Byte;
+#include "Method.h"
 
 
 
@@ -27,7 +25,7 @@ Int32 alphaMax;
 
 
 
-Bool Draw_Method_Init()
+void Draw_Method_Init()
 {
     bufferPixelByteCount = sizeof(Int32);
 
@@ -45,10 +43,6 @@ Bool Draw_Method_Init()
 
 
     alphaMax = 255;
-
-
-
-    return true;
 }
 
 
