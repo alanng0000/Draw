@@ -68,7 +68,7 @@ Bool Draw_SetPixelList(Object this, Int value)
 
 
     p = CastPointer(value);
-    
+
 
 
 
@@ -80,6 +80,40 @@ Bool Draw_SetPixelList(Object this, Int value)
 }
 
 
+
+
+
+Object Draw_GetSize(Object this)
+{
+    Draw* m;
+
+
+    m = CastPointer(this);
+
+
+
+    return m->Size;
+}
+
+
+
+
+
+Bool Draw_SetSize(Object this, Object value)
+{
+    Draw* m;
+
+
+    m = CastPointer(this);
+
+
+
+    m->Size = value;
+
+
+
+    return true;
+}
 
 
 
