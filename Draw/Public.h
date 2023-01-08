@@ -23,10 +23,10 @@ void Draw_Method_Init();
 
 
 
-void Draw_Method_Color(DByte* bufferPointer, DInt32 bufferStride, DInt32 rectRow, DInt32 rectCol, DInt32 rectWidth, DInt32 rectHeight, DInt32 color);
+void Draw_Method_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color);
 
 
 
 
-void Draw_Method_Image(DByte* bufferPointer, DInt32 bufferStride, DInt32 rectRow, DInt32 rectCol, DInt32 rectWidth, DInt32 rectHeight, 
-    DInt32 posRow, DInt32 posCol, DByte* pixelPointer, DInt32 pixelStride);
+void Draw_Method_Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
+    Int32 posRow, Int32 posCol, Byte* pixelPointer, Int32 pixelStride);

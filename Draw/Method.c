@@ -4,22 +4,22 @@
 
 
 
-DInt32 bufferPixelByteCount;
+Int32 bufferPixelByteCount;
 
 
-DInt32 bitsPerByte;
+Int32 bitsPerByte;
 
 
-DInt32 alphaShift;
+Int32 alphaShift;
 
-DInt32 redShift;
+Int32 redShift;
 
-DInt32 greenShift;
+Int32 greenShift;
 
-DInt32 blueShift;
+Int32 blueShift;
 
 
-DInt32 alphaMax;
+Int32 alphaMax;
 
 
 
@@ -27,7 +27,7 @@ DInt32 alphaMax;
 
 void Draw_Method_Init()
 {
-    bufferPixelByteCount = sizeof(DInt32);
+    bufferPixelByteCount = sizeof(Int32);
 
 
     bitsPerByte = 8;
@@ -49,78 +49,78 @@ void Draw_Method_Init()
 
 
 
-void Draw_Method_Color(DByte* bufferPointer, DInt32 bufferStride, DInt32 rectRow, DInt32 rectCol, DInt32 rectWidth, DInt32 rectHeight, DInt32 color)
+void Draw_Method_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
 {
-    DInt32 alpha;
-    alpha = (DByte)(color >> alphaShift);
+    Int32 alpha;
+    alpha = (Byte)(color >> alphaShift);
 
-    DInt32 red;
-    red = (DByte)(color >> redShift);
+    Int32 red;
+    red = (Byte)(color >> redShift);
 
-    DInt32 green;
-    green = (DByte)(color >> greenShift);
+    Int32 green;
+    green = (Byte)(color >> greenShift);
 
-    DInt32 blue;
-    blue = (DByte)(color >> blueShift);
+    Int32 blue;
+    blue = (Byte)(color >> blueShift);
 
 
-    DInt32 tAlpha;
+    Int32 tAlpha;
     tAlpha = alphaMax - alpha;
 
 
 
 
-    DInt32 i;
+    Int32 i;
     i = 0;
 
     while (i < rectHeight)
     {
-        DInt32 j;
+        Int32 j;
         j = 0;
 
         while (j < rectWidth)
         {
-            DInt32 row;
+            Int32 row;
             row = rectRow + i;
 
 
-            DInt32 col;
+            Int32 col;
             col = rectCol + j;
 
 
-            DByte* u;
+            Byte* u;
             u = bufferPointer + row * bufferStride + col * bufferPixelByteCount;
 
 
-            DInt32* d;
-            d = (DInt32*)u;
+            Int32* d;
+            d = (Int32*)u;
 
 
-            DInt32 t;
+            Int32 t;
             t = *d;
 
 
-            DInt32 tRed;
-            tRed = (DByte)(t >> redShift);
+            Int32 tRed;
+            tRed = (Byte)(t >> redShift);
 
-            DInt32 tGreen;
-            tGreen = (DByte)(t >> greenShift);
+            Int32 tGreen;
+            tGreen = (Byte)(t >> greenShift);
 
-            DInt32 tBlue;
-            tBlue = (DByte)(t >> blueShift);
+            Int32 tBlue;
+            tBlue = (Byte)(t >> blueShift);
 
 
-            DInt32 hRed;
+            Int32 hRed;
             hRed = (alpha * red + tAlpha * tRed) / alphaMax;
 
-            DInt32 hGreen;
+            Int32 hGreen;
             hGreen = (alpha * green + tAlpha * tGreen) / alphaMax;
 
-            DInt32 hBlue;
+            Int32 hBlue;
             hBlue = (alpha * blue + tAlpha * tBlue) / alphaMax;
 
 
-            DInt32 h;
+            Int32 h;
             h = (hRed << redShift) | (hGreen << greenShift) | (hBlue << blueShift);
 
 
@@ -138,99 +138,99 @@ void Draw_Method_Color(DByte* bufferPointer, DInt32 bufferStride, DInt32 rectRow
 
 
 
-void Draw_Method_Image(DByte* bufferPointer, DInt32 bufferStride, DInt32 rectRow, DInt32 rectCol, DInt32 rectWidth, DInt32 rectHeight, 
-    DInt32 posRow, DInt32 posCol, DByte* pixelPointer, DInt32 pixelStride)
+void Draw_Method_Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
+    Int32 posRow, Int32 posCol, Byte* pixelPointer, Int32 pixelStride)
 {
-    DInt32 i;
+    Int32 i;
     i = 0;
 
     while (i < rectHeight)
     {
-        DInt32 j;
+        Int32 j;
         j = 0;
 
         while (j < rectWidth)
         {
-            DInt32 row;
+            Int32 row;
             row = rectRow + i;
 
 
-            DInt32 col;
+            Int32 col;
             col = rectCol + j;
 
 
-            DByte* u;
+            Byte* u;
             u = bufferPointer + row * bufferStride + col * bufferPixelByteCount;
 
 
-            DInt32* d;
-            d = (DInt32*)u;
+            Int32* d;
+            d = (Int32*)u;
 
 
-            DInt32 t;
+            Int32 t;
             t = *d;
 
 
-            DInt32 mRow;
+            Int32 mRow;
             mRow = posRow + i;
 
 
-            DInt32 mCol;
+            Int32 mCol;
             mCol = posCol + j;
 
 
-            DByte* n;
+            Byte* n;
             n = pixelPointer + mRow * pixelStride + mCol * bufferPixelByteCount;
 
 
-            DInt32* o;
-            o = (DInt32*)n;
+            Int32* o;
+            o = (Int32*)n;
 
 
-            DInt32 color;
+            Int32 color;
             color = *o;
 
 
-            DInt32 alpha;
-            alpha = (DByte)(color >> alphaShift);
+            Int32 alpha;
+            alpha = (Byte)(color >> alphaShift);
 
-            DInt32 red;
-            red = (DByte)(color >> redShift);
+            Int32 red;
+            red = (Byte)(color >> redShift);
 
-            DInt32 green;
-            green = (DByte)(color >> greenShift);
+            Int32 green;
+            green = (Byte)(color >> greenShift);
 
-            DInt32 blue;
-            blue = (DByte)(color >> blueShift);
+            Int32 blue;
+            blue = (Byte)(color >> blueShift);
 
 
 
-            DInt32 tAlpha;
+            Int32 tAlpha;
             tAlpha = alphaMax - alpha;
 
 
 
-            DInt32 tRed;
-            tRed = (DByte)(t >> redShift);
+            Int32 tRed;
+            tRed = (Byte)(t >> redShift);
 
-            DInt32 tGreen;
-            tGreen = (DByte)(t >> greenShift);
+            Int32 tGreen;
+            tGreen = (Byte)(t >> greenShift);
 
-            DInt32 tBlue;
-            tBlue = (DByte)(t >> blueShift);
+            Int32 tBlue;
+            tBlue = (Byte)(t >> blueShift);
 
 
-            DInt32 hRed;
+            Int32 hRed;
             hRed = (alpha * red + tAlpha * tRed) / alphaMax;
 
-            DInt32 hGreen;
+            Int32 hGreen;
             hGreen = (alpha * green + tAlpha * tGreen) / alphaMax;
 
-            DInt32 hBlue;
+            Int32 hBlue;
             hBlue = (alpha * blue + tAlpha * tBlue) / alphaMax;
 
 
-            DInt32 h;
+            Int32 h;
             h = (hRed << redShift) | (hGreen << greenShift) | (hBlue << blueShift);
 
 
