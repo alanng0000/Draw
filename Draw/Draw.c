@@ -121,9 +121,17 @@ Bool Draw_SetSize(Object this, Object value)
 
 Object Draw_Color(Object this, Int color, Object rect)
 {
+    Int o;
+    
+    o = Draw_GetPixelList(this);
+
+
+
     Int32* pixelList;
 
-    pixelList = Draw_GetPixelList(this);
+    pixelList = CastPointer(o);
+    
+
 
 
 
