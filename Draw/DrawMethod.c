@@ -4,26 +4,32 @@ typedef unsigned char Byte;
 
 
 
-void DrawMethod_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
+
+
+Int32 bufferPixelByteCount = sizeof(Int32);
+
+
+Int32 bitsPerByte = 8;
+
+
+Int32 alphaShift = bitsPerByte * 3;
+
+Int32 redShift = bitsPerByte * 2;
+
+Int32 greenShift = bitsPerByte * 1;
+
+Int32 blueShift = bitsPerByte * 0;
+
+
+Int32 alphaMax = 255;
+
+
+
+
+
+
+void Draw_Method_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, Int32 color)
 {
-    Int32 bufferPixelByteCount = sizeof(Int32);
-
-
-    Int32 bitsPerByte = 8;
-
-
-    Int32 alphaShift = bitsPerByte * 3;
-
-    Int32 redShift = bitsPerByte * 2;
-
-    Int32 greenShift = bitsPerByte * 1;
-
-    Int32 blueShift = bitsPerByte * 0;
-
-
-    Int32 alphaMax = 255;
-
-
     Int32 alpha;
     alpha = (Byte)(color >> alphaShift);
 
@@ -111,25 +117,10 @@ void DrawMethod_Color(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, In
 
 
 
-void DrawMethod_Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
+void Draw_Method_Image(Byte* bufferPointer, Int32 bufferStride, Int32 rectRow, Int32 rectCol, Int32 rectWidth, Int32 rectHeight, 
     Int32 posRow, Int32 posCol, Byte* pixelPointer, Int32 pixelStride)
 {
-    Int32 bufferPixelByteCount = sizeof(Int32);
 
-
-    Int32 bitsPerByte = 8;
-
-
-    Int32 alphaShift = bitsPerByte * 3;
-
-    Int32 redShift = bitsPerByte * 2;
-
-    Int32 greenShift = bitsPerByte * 1;
-
-    Int32 blueShift = bitsPerByte * 0;
-
-
-    Int32 alphaMax = 255;
 
 
 
