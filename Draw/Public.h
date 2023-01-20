@@ -20,3 +20,8 @@
 
 Draw_Api
 Object Draw_Draw_Create(Int hdc);
+
+
+
+Draw_Api
+Bool Draw_Draw_Delete(Object o);

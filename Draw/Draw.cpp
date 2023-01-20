@@ -24,3 +24,19 @@ Object Draw_Draw_Create(Int hdc)
 
     return a;
 }
+
+
+
+
+Bool Draw_Draw_Delete(Object o)
+{
+    void* p;
+
+    p = CastPointer(o);
+
+
+    delete p;
+
+
+    return true;
+}
