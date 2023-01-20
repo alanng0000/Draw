@@ -5,16 +5,16 @@
 
 Object Draw_Draw_Create(Int hdc)
 {
-    void* p;
+    HDC p;
 
     p = CastPointer(hdc);
 
 
 
-    Graphics* o;
+    Gdiplus::Graphics* o;
 
-    o = new Graphics(p);
-    
+    o = new Gdiplus::Graphics(p);
+
 
 
     Object a;
