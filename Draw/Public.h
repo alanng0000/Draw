@@ -41,4 +41,15 @@ Object Draw_ColorBrush_New();
 
 
 
+Draw_Api
 Bool Draw_ColorBrush_Delete(Object o);
+
+
+
+Draw_Api
+Int Draw_ColorBrush_GetColor(Object o);
+
+
+
+Draw_Api
+Bool Draw_ColorBrush_SetColor(Object o, Int value);
