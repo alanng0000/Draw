@@ -31,3 +31,14 @@ Bool Draw_Draw_Delete(Object o);
 
 Draw_Api
 Bool Draw_Draw_Rect(Object o, Object brush, Int left, Int up, Int width, Int height);
+
+
+
+
+
+Draw_Api
+Object Draw_ColorBrush_New();
+
+
+
+Bool Draw_ColorBrush_Delete(Object o);
