@@ -25,3 +25,9 @@ Object Draw_Draw_Create(Int hdc);
 
 Draw_Api
 Bool Draw_Draw_Delete(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Draw_Rect(Object o, Object brush, Int left, Int up, Int width, Int height);
