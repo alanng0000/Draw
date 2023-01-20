@@ -2,11 +2,4 @@
 
 
 
-extern "C"
-{
-
-
 #include "Local.h"
-
-
-}

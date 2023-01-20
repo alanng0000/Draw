@@ -19,3 +19,10 @@
 
 Draw_Api
 Bool Draw_Method_Init();
+
+
+
+
+
+Draw_Api
+Object Draw_Draw_Create(Int hdc);
