@@ -7,7 +7,7 @@ Object Draw_Draw_Create(Int hdc)
 {
     HDC p;
 
-    p = CastPointer(hdc);
+    p = (HDC)hdc;
 
 
 
