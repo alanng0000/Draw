@@ -18,4 +18,4 @@
 
 
 Draw_Api
-void Draw_Method_Init();
+Bool Draw_Method_Init();
