@@ -258,6 +258,29 @@ Bool Draw_Draw_SetMethod(Object o, Int value)
 
 
 
+Bool Draw_Draw_Finish(Object o)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+
+
+    m->HandleGraphic->DrawImage(m->Bitmap, 0, 0);
+
+
+
+    return true;
+}
+
+
+
+
+
+
+
+
 
 Draw* Draw_Draw_Pointer(Object o)
 {
@@ -272,46 +295,55 @@ Draw* Draw_Draw_Pointer(Object o)
 
 
 
+Int Draw_Draw_Constant_DefaultColor;
+
+
 
 
 
 Bool Draw_FrameDrawHandle(Object frame, Object arg)
 {
+    Object draw;
+
+    
+    draw = arg;
+
+
+
+
+    Int u;
+
+    u = Draw_Draw_GetMethod(draw);
 
 
 
 
 
-    Gdiplus::Graphics* p;
+    Draw_Draw_Method method;
 
-    p = &graphics;
-
-
-
-
-    Object o;
-
-    o = CastInt(p);
+    method = (Draw_Draw_Method)u;
 
 
 
 
+    Draw_Draw_Clear(draw, Draw_Draw_Constant_DefaultColor);
 
-    Draw_DrawHandle_Method method;
 
-    method = (Draw_DrawHandle_Method)arg;
+
 
 
 
     if (!(method == null))
     {
-        method(o);
+        method(draw);
     }
 
 
 
 
-    g.DrawImage(&bmp, 0, 0);
+    Draw_Draw_Finish(draw);
+
+    
 
 
     return true;

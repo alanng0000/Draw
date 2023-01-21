@@ -22,6 +22,11 @@ Bool Draw_Init()
     Gdiplus::GdiplusStartup(& Draw::Private::gdiplusToken, & Draw::Private::gdiplusStartupInput, NULL);
 
 
+
+    Draw_Draw_Constant_DefaultColor = 0xffffffff;
+
+
+
     return true;
 }
 

@@ -49,3 +49,8 @@ Draw* Draw_Draw_Pointer(Object o);
 
 
 Draw_Draw_Method Draw_Draw_GetMethodAddress(Object o);
+
+
+
+
+Bool Draw_Draw_Finish(Object o);
