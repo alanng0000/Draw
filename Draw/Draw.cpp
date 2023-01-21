@@ -244,12 +244,13 @@ Int Draw_Draw_GetMethod(Object o)
     method = Draw_Draw_GetMethodAddress(o);
 
 
-    Int o;
 
-    o = CastInt(method);
+    Int u;
+
+    u = CastInt(method);
 
 
-    return o;
+    return u;
 }
 
 
