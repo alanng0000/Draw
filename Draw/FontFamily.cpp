@@ -148,15 +148,21 @@ FontFamily* Draw_FontFamily_Pointer(Object o)
 
 Bool Draw_FontFamily_CopyString(WCHAR* result, Object string)
 {
-    Int count = String_GetLength(string);
+    Int count;
+    
+    count = String_GetLength(string);
 
 
 
-    Int w = 0;
+    Int w;
+    
+    w = 0;
 
 
 
-    WCHAR o = L'\0';
+    WCHAR o;
+    
+    o = L'\0';
 
 
 
