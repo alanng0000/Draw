@@ -3,7 +3,15 @@
 
 
 
+Object Draw;
 
+
+
+Object Brush;
+
+
+
+Int Comp;
 
 
 
@@ -292,6 +300,48 @@ Bool ControlHandleConsoleWriteKeyValue(Int controlKey, Int controlValue)
 
 Bool DrawHandle(Object frame)
 {
+    int left;
+
+    left = 100;
+
+
+    int up;
+
+    up = 100;
+
+
+    int width;
+
+    width = 400;
+
+
+    int height;
+
+    height = 400;
+
+
+
+
+    Int color;
+
+
+    color = 0xff000000;
+
+
+    color = color | Comp;
+
+
+
+
+    Draw_ColorBrush_SetColor(Brush, color);
+
+
+
+
+    Draw_Draw_Rect(Draw, Brush, left, up, width, height);
+
+    
+
 
     return true;
 }
@@ -303,28 +353,31 @@ Bool DrawHandle(Object frame)
 
 Bool ControlHandle(Object frame, Int key, Int value)
 {
-    //ControlHandleConsoleWriteKeyValue(key, value);
+    if (value == 0)
+    {
+        return true;
+    }
 
 
 
 
     if (key == 0x20)
     {
-        if (value == 1)
-        {
-            Frame_Close(frame);
+        Frame_Close(frame);
 
 
-            return true;
-        }
+        return true;
     }
 
 
 
 
-    if (value == 0)
+    if (key == 'A')
     {
-        return true;
+        Comp = Comp + 10;
+
+
+        Frame_Update(frame);
     }
 
 
@@ -369,18 +422,20 @@ Bool DemoExecute()
 
 
 
-    Int handle;
+
+    Int controlHandle;
     
     
-    handle = CastInt(&ControlHandle);
+    controlHandle = CastInt(&ControlHandle);
 
 
 
 
-    Int u;
+    Int drawHandle;
 
 
-    u = CastInt(&DrawHandle);
+    drawHandle = CastInt(&DrawHandle);
+
 
 
 
@@ -402,11 +457,30 @@ Bool DemoExecute()
 
 
 
-    Frame_SetControlHandle(frame, handle);
+
+
+    Int handle;
+
+    handle = Frame_GetHandle(frame);
+    
 
 
 
-    Frame_SetDrawHandle(frame, u);
+    Draw = Draw_Draw_Create(handle);
+
+
+
+    Brush = Draw_ColorBrush_New();
+
+
+
+
+
+    Frame_SetControlHandle(frame, controlHandle);
+
+
+
+    Frame_SetDrawHandle(frame, drawHandle);
 
 
 
