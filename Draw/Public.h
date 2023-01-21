@@ -154,6 +154,54 @@ Bool Draw_FontFamily_SetName(Object o, Object value);
 
 
 
+ObjectApi(Draw, Font)
+
+
+
+
+Draw_Api
+Object Draw_Font_GetFamily(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Font_SetFamily(Object o, Object value);
+
+
+
+
+
+Draw_Api
+Int Draw_Font_GetSize(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Font_SetSize(Object o, Int value);
+
+
+
+
+
+Draw_Api
+Int Draw_Font_GetStyle(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Font_SetStyle(Object o, Int value);
+
+
+
+
+
+
+
+
+
 
 Draw_Api
 Bool Draw_FrameDrawHandle(Object arg);
