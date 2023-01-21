@@ -3,11 +3,12 @@
 
 
 
-Bool Draw_Handle(Object frame, Int handle, Object arg)
+Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg)
 {
     HDC hdc;
 
     hdc = (HDC)handle;
+
 
 
     Gdiplus::Graphics g(hdc);
@@ -21,12 +22,25 @@ Bool Draw_Handle(Object frame, Int handle, Object arg)
 
 
 
+
     Object o;
 
     o = CastInt(p);
 
 
 
+
+
+    Draw_DrawHandle_Method method;
+
+    method = (Draw_DrawHandle_Method)arg;
+
+
+
+    if (!(method == null))
+    {
+        method(o);
+    }
 
 
 
