@@ -45,6 +45,24 @@ Bool Draw_ColorBrush_Delete(Object o)
 
 
 
+
+Bool Draw_ColorBrush_Init(Object o)
+{
+    return true;
+}
+
+
+
+
+
+Bool Draw_ColorBrush_Final(Object o)
+{
+    return true;
+}
+
+
+
+
 Int Draw_ColorBrush_GetColor(Object o)
 {
     Gdiplus::SolidBrush* m;
