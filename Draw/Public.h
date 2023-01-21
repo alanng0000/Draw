@@ -30,7 +30,7 @@ Bool Draw_Draw_Delete(Object o);
 
 
 Draw_Api
-Bool Draw_Draw_Rect(Object o, Object brush, Int left, Int up, Int width, Int height);
+Bool Draw_Draw_Rect(Object o, Object brush, int left, int up, int width, int height);
 
 
 

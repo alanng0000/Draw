@@ -45,7 +45,7 @@ Bool Draw_Draw_Delete(Object o)
 
 
 
-Bool Draw_Draw_Rect(Object o, Object brush, Int left, Int up, Int width, Int height)
+Bool Draw_Draw_Rect(Object o, Object brush, int left, int up, int width, int height)
 {
     Gdiplus::Graphics* m;
 
@@ -60,29 +60,8 @@ Bool Draw_Draw_Rect(Object o, Object brush, Int left, Int up, Int width, Int hei
 
 
 
-    INT l;
 
-    l = (INT)left;
-
-
-    INT u;
-
-    u = (INT)up;
-
-
-    INT w;
-    
-    w = (INT)width;
-
-
-    INT h;
-
-    h = (INT)height;
-
-
-
-
-    m->FillRectangle(oc, l, u, w, h);
+    m->FillRectangle(oc, left, up, width, height);
 
 
 
