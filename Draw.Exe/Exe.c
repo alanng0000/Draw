@@ -19,6 +19,10 @@ Object Data;
 
 
 
+IStream* Stream;
+
+
+
 
 Byte Comp;
 
@@ -52,6 +56,15 @@ Bool StorageStringSet(Object string, Int charArray)
     return true;
 }
 
+
+
+
+Bool StreamExecute()
+{
+
+
+    return true;
+}
 
 
 
@@ -715,6 +728,9 @@ Bool DemoExecute()
 
 
 
+
+
+    StorageExecute();
 
 
 
