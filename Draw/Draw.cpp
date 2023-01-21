@@ -390,11 +390,12 @@ Bool Draw_Draw_Clear(Object o, Int color)
 
 
 
-Bool Draw_Draw_Rect(Object o, Object brush, int left, int up, int width, int height)
+Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int height)
 {
-    Gdiplus::Graphics* m;
+    Draw* m;
 
-    m = (Gdiplus::Graphics*)o;
+    m = Draw_Draw_Pointer(o);
+
 
 
 
@@ -405,8 +406,32 @@ Bool Draw_Draw_Rect(Object o, Object brush, int left, int up, int width, int hei
 
 
 
+    int l;
 
-    m->FillRectangle(oc, left, up, width, height);
+    l = (int)left;
+
+
+
+    int u;
+
+    u = (int)up;
+
+
+
+    int w;
+
+    w = (int)width;
+
+
+
+    int h;
+
+    h = (int)height;
+
+
+
+
+    m->Graphic->FillRectangle(oc, l, u, w, h);
 
 
 
