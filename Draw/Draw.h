@@ -21,13 +21,13 @@
 
 struct Draw
 {
-    Gdiplus::Graphics* graphic;
+    Gdiplus::Graphics* Graphic;
 
 
-    Gdiplus::Graphics* handleGraphic;
+    Gdiplus::Graphics* HandleGraphic;
 
 
-    Gdiplus::Bitmap* bitmap;
+    Gdiplus::Bitmap* Bitmap;
 
 
     Int Handle;
