@@ -72,7 +72,7 @@ Bool Draw_Draw_Clear(Object o, Int color);
 
 
 Draw_Api
-Bool Draw_Draw_Rect(Object o, Object brush, int left, int up, int width, int height);
+Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int height);
 
 
 
