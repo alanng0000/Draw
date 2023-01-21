@@ -8,6 +8,36 @@
 
 
 
+Bool SetFormatArg(Object format, Int arg, Int index, Int type, Int value)
+{
+    Object o;
+
+
+    o = Format_Arg(format, arg);
+
+
+
+
+
+    FormatArg_SetIndex(o, index);
+
+
+
+    FormatArg_SetType(o, type);
+
+
+
+    FormatArg_SetValue(o, value);
+
+
+
+
+    return true;
+}
+
+
+
+
 
 Bool ControlHandleConsoleWriteKeyValue(Int controlKey, Int controlValue)
 {
