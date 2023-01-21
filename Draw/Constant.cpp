@@ -48,11 +48,29 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+
+    m->FontStyleBold = Gdiplus::FontStyleBold;
+
+
+    m->FontStyleItalic = Gdiplus::FontStyleItalic;
+
+
+    m->FontStyleUnderline = Gdiplus::FontStyleUnderline;
+
+
+
+
     return true;
 }
 
 
 
+
+
+Bool Draw_Constant_Final(Object o)
+{
+    return true;
+}
 
 
 
