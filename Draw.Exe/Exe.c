@@ -533,7 +533,7 @@ Bool DemoExecute()
 
 
     Frame_SetDrawHandle(frame, drawHandle);
-    
+
 
 
 
@@ -549,6 +549,21 @@ Bool DemoExecute()
 
 
     Frame_Execute(frame);
+
+
+
+
+
+
+    Draw_Draw_Final(Draw);
+
+
+
+
+    Draw_Draw_Delete(Draw);
+
+
+
 
 
 
