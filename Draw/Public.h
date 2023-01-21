@@ -18,11 +18,21 @@
 
 
 
+ObjectApi(Draw, Draw);
+
+
 
 
 
 Draw_Api
-Bool Draw_Draw_Create(Int result, Int handle);
+Int Draw_Draw_GetHandle(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Draw_SetHandle(Object o, Int value);
+
 
 
 

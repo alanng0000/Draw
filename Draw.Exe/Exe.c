@@ -325,10 +325,10 @@ Bool DrawHandle(Object draw)
     Int color;
 
 
-    color = 0x80000010;
+    color = 0x80000000;
 
 
-    //color = color | 0xff;
+    color = color | Comp;
 
 
 

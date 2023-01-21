@@ -3,7 +3,14 @@
 
 
 
-Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg)
+Object Draw_Draw_Create(Int handle)
+{
+    
+}
+
+
+
+Bool Draw_FrameDrawHandle(Object frame, Object arg)
 {
     HDC hdc;
 
