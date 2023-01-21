@@ -11,13 +11,18 @@ Object Brush;
 
 
 
-Objet Image;
+Object Image;
 
+
+
+Object Data;
 
 
 
 
 Byte Comp;
+
+
 
 
 
@@ -55,7 +60,7 @@ Bool StorageStringSet(Object string, Int charArray)
 
 Bool StorageExecute()
 {
-    Int ca = CastInt("demo.txt");
+    Int ca = CastInt("sun_and_cloud.jpg");
 
 
 
@@ -94,6 +99,18 @@ Bool StorageExecute()
 
 
 
+    Storage_Status(storage);
+
+
+
+    Int demoFileSize;
+    
+
+    demoFileSize = Storage_GetSize(storage);
+
+
+
+
 
     Storage_SetMode(storage, 0);
 
@@ -106,7 +123,9 @@ Bool StorageExecute()
 
 
 
-    Int size = 11;
+    Int size;
+    
+    size = demoFileSize;
 
 
 
@@ -141,6 +160,44 @@ Bool StorageExecute()
 
 
     Storage_Read(storage, data);
+
+
+
+    
+
+
+
+    Storage_Close(storage);
+
+
+
+
+
+
+
+    Storage_Final(storage);
+
+
+
+
+    Storage_Delete(storage);
+
+
+
+
+
+    String_Final(name);
+
+
+
+    String_Delete(name);
+
+
+
+
+
+
+    Data = data;
 
 
 
