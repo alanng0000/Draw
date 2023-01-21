@@ -8,6 +8,8 @@ Object Draw_ColorBrush_New()
 {
     Gdiplus::Color color;
 
+    color = Gdiplus::Color();
+
 
     Gdiplus::SolidBrush* o;
 
