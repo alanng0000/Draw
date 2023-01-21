@@ -53,4 +53,4 @@ Draw_Draw_Method Draw_Draw_GetMethodAddress(Object o);
 
 
 
-Bool Draw_Draw_Finish(Object o);
+Bool Draw_Draw_Result(Object o);

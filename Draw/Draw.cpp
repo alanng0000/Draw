@@ -282,7 +282,7 @@ Bool Draw_Draw_SetMethod(Object o, Int value)
 
 
 
-Bool Draw_Draw_Finish(Object o)
+Bool Draw_Draw_Result(Object o)
 {
     Draw* m;
 
@@ -365,7 +365,7 @@ Bool Draw_FrameDrawHandle(Object frame, Object arg)
 
 
 
-    Draw_Draw_Finish(draw);
+    Draw_Draw_Result(draw);
 
     
 
