@@ -11,14 +11,14 @@ Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg)
 
 
 
-    Gdiplus::Graphics g(hdc);
+    Gdiplus::Graphics graphics(hdc);
 
 
 
 
     Gdiplus::Graphics* p;
 
-    p = &g;
+    p = &graphics;
 
 
 
