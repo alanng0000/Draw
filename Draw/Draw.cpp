@@ -345,7 +345,30 @@ Bool Draw_FrameDrawHandle(Object arg)
 
 
 
-    Draw_Draw_Clear(draw, Draw_Draw_Constant_DefaultColor);
+
+    Object global;
+
+
+    global = Draw_Global();
+
+
+
+    Object constant;
+
+
+    constant = Draw_Global_Constant(global);
+
+
+
+    Object clearColor;
+
+
+    clearColor = Draw_Constant_DefaultColor(constant);
+
+
+
+
+    Draw_Draw_Clear(draw, clearColor);
 
 
 
