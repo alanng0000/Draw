@@ -59,8 +59,35 @@ Bool StorageStringSet(Object string, Int charArray)
 
 
 
+
 Bool StreamExecute()
 {
+    Int o;
+
+    o = Data_GetValue(Data);
+
+
+
+    Int size;
+
+    size = Data_GetSize(Data);
+
+
+
+    Int32 sizeU;
+
+    sizeU = (Int32)size;
+
+
+
+    void* p;
+
+    p = CastPointer(o);
+
+
+
+
+    Stream = SHCreateMemStream(p, sizeU);
 
 
     return true;
