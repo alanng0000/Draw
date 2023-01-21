@@ -325,7 +325,7 @@ Int Draw_Draw_Constant_DefaultColor;
 
 
 
-Bool Draw_FrameDrawHandle(Object frame, Object arg)
+Bool Draw_FrameDrawHandle(Object arg)
 {
     Object draw;
 
