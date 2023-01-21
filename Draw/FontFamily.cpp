@@ -86,7 +86,7 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
-    m->FontFamily = new Gdiplus::FontFamily(m->NameWChar);
+    m->Internal = new Gdiplus::FontFamily(m->NameWChar);
 
 
 
@@ -106,7 +106,7 @@ Bool Draw_FontFamily_Final(Object o)
 
 
 
-    delete m->FontFamily;
+    delete m->Internal;
 
 
     delete[] m->NameWChar;

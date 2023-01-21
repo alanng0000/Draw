@@ -17,7 +17,7 @@ struct FontFamily
     
     WCHAR* NameWChar;
 
-    Gdiplus::FontFamily* FontFamily;
+    Gdiplus::FontFamily* Internal;
 };
 
 
