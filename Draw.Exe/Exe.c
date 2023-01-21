@@ -298,7 +298,7 @@ Bool ControlHandleConsoleWriteKeyValue(Int controlKey, Int controlValue)
 
 
 
-Bool DrawHandle(Object draw)
+Bool DrawExecute(Object draw)
 {
     int left;
 
@@ -449,13 +449,6 @@ Bool DemoExecute()
 
 
 
-    Object drawHandleArg;
-
-    drawHandleArg = CastInt(&DrawHandle);
-
-
-
-
 
 
     Object frame;
@@ -472,6 +465,53 @@ Bool DemoExecute()
 
     Frame_Init(frame);
 
+
+
+
+
+
+
+    Int handle;
+
+    handle = Frame_GetHandle(frame);
+
+
+
+
+    Object size;
+
+    size = Frame_GetSize(frame);
+
+
+
+
+
+    Draw = Draw_Draw_New();
+
+
+
+
+    Draw_Draw_SetHandle(Draw, handle);
+
+
+
+    Draw_Draw_SetSize(Draw, size);
+
+
+
+
+    Draw_Draw_Init(Draw);
+
+
+
+
+    Int u;
+
+    u = CastInt(&DrawExecute);
+
+
+
+    Draw_Draw_SetMethod(Draw, u);
 
 
 
@@ -493,10 +533,11 @@ Bool DemoExecute()
 
 
     Frame_SetDrawHandle(frame, drawHandle);
+    
 
 
 
-    Frame_SetDrawHandleArg(frame, drawHandleArg);
+    Frame_SetDrawHandleArg(frame, Draw);
 
 
 
