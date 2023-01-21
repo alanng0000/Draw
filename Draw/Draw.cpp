@@ -3,17 +3,17 @@
 
 
 
-Object Draw_Draw_Create(Int hdc)
+Object Draw_Draw_Create(Int handle)
 {
-    HDC p;
+    HDC hdc;
 
-    p = (HDC)hdc;
+    hdc = (HDC)handle;
 
 
 
     Gdiplus::Graphics* o;
 
-    o = new Gdiplus::Graphics(p);
+    o = new Gdiplus::Graphics(hdc);
 
 
 

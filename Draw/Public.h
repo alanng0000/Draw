@@ -19,7 +19,7 @@
 
 
 Draw_Api
-Object Draw_Draw_Create(Int hdc);
+Object Draw_Draw_Create(Int handle);
 
 
 
