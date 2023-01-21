@@ -332,15 +332,6 @@ Bool DrawExecute(Object draw)
 
 
 
-    Int clearColor;
-
-    clearColor = 0xffffffff;
-
-
-
-    Draw_Draw_Clear(draw, clearColor);
-
-
 
 
     Draw_ColorBrush_SetColor(Brush, color);
