@@ -200,6 +200,18 @@ Bool Draw_Font_SetStyle(Object o, Int value);
 
 
 
+Draw_Api
+Object Draw_Global_Constant(Object o);
+
+
+
+
+Draw_Api
+Object Draw_Global();
+
+
+
+
 
 
 
