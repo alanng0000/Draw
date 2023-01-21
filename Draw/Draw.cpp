@@ -80,11 +80,7 @@ Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg)
 
     Gdiplus::Graphics g(hdc);
 
-    //g.Flush(Gdiplus::FlushIntention::FlushIntentionSync);
-
     g.DrawImage(&bmp, 0, 0);
-
-    //g.Flush(Gdiplus::FlushIntention::FlushIntentionSync);
 
 
     return true;
