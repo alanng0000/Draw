@@ -135,6 +135,25 @@ Object Draw_Image_GetSize(Object o);
 
 
 
+ObjectApi(Draw, FontFamily)
+
+
+
+
+Draw_Api
+Int Draw_FontFamily_GetName(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_FontFamily_SetName(Object o, Int value);
+
+
+
+
+
+
 
 Draw_Api
 Bool Draw_FrameDrawHandle(Object arg);
