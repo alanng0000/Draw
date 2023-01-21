@@ -535,7 +535,7 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
-    m->Graphic->DrawImage(mm, destRect, sourceL, sourceU, sourceW, sourceH);
+    m->Graphic->DrawImage(mm, destRect, sourceL, sourceU, sourceW, sourceH, Gdiplus::UnitPixel);
 
 
 
