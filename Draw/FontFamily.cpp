@@ -154,6 +154,22 @@ Bool Draw_FontFamily_SetName(Object o, Object value)
 
 
 
+Gdiplus::FontFamily* Draw_FontFamily_GetInternal(Object o)
+{
+    FontFamily* m;
+
+    m = Draw_FontFamily_Pointer(o);
+
+
+
+    return m->Internal;
+}
+
+
+
+
+
+
 FontFamily* Draw_FontFamily_Pointer(Object o)
 {
     FontFamily* m;
