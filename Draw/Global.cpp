@@ -50,19 +50,19 @@ Bool Draw_Global_Init(Object o)
 
 
 
-    Object constants;
+    Object constant;
     
     
 
-    constants = Constants_New();
+    constant = Draw_Constant_New();
 
 
 
-    Constants_Init(constants);
+    Draw_Constant_Init(constant);
 
 
 
-    m->Constants = constants;
+    m->Constant = constant;
 
 
 
@@ -73,21 +73,30 @@ Bool Draw_Global_Init(Object o)
 
 
 
-Bool Global_Final(Object this)
+Bool Draw_Global_Final(Object o)
 {
-    Global* m = CastPointer(this);
+    Global* m;
+    
+
+    m = Draw_Global_Pointer(o);
 
 
 
-    Object constants = m->Constants;
+
+
+    Object constant;
+    
+
+
+    constant = m->Constant;
 
 
 
-    Constants_Final(constants);
+    Draw_Constant_Final(constant);
 
 
 
-    Constants_Delete(constants);
+    Draw_Constant_Delete(constant);
 
 
 
@@ -98,13 +107,19 @@ Bool Global_Final(Object this)
 
 
 
-Object Global_Constants(Object this)
+Object Draw_Global_Constant(Object o)
 {
-    Global* m = CastPointer(this);
+    Global* m;
+    
+
+    m = Draw_Global_Pointer(o);
 
 
-    return m->Constants;
+
+
+    return m->Constant;
 }
+
 
 
 

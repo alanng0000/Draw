@@ -45,6 +45,8 @@ Gdiplus::FontFamily* Draw_FontFamily_GetInternal(Object o);
 
 
 
+
+
 Object Draw_Constant_New();
 
 
@@ -58,3 +60,24 @@ Bool Draw_Constant_Init(Object o);
 
 
 Bool Draw_Constant_Final(Object o);
+
+
+
+
+
+
+
+Object Draw_Global_New();
+
+
+
+Bool Draw_Global_Delete(Object o);
+
+
+
+
+Bool Draw_Global_Init(Object o);
+
+
+
+Bool Draw_Global_Final(Object o);
