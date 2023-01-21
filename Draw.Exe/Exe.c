@@ -298,37 +298,8 @@ Bool ControlHandleConsoleWriteKeyValue(Int controlKey, Int controlValue)
 
 
 
-Bool DrawHandle(Object frame)
+Bool DrawHandle(Object draw)
 {
-    Object draw;
-
-
-
-    Int handle;
-
-    handle = Frame_GetHandle(frame);
-    
-
-
-    Object* p;
-
-    p = &draw;
-
-
-
-    Int u;
-
-    u = CastInt(p);
-
-
-
-    Draw_Draw_Create(u, handle);
-
-
-
-
-
-
     int left;
 
     left = 100;
@@ -463,8 +434,15 @@ Bool DemoExecute()
     Int drawHandle;
 
 
-    drawHandle = CastInt(&DrawHandle);
+    drawHandle = CastInt(&Draw_FrameDrawHandle);
 
+
+
+
+    Object drawHandleArg;
+
+    drawHandleArg = CastInt(&DrawHandle);
+    
 
 
 
@@ -502,7 +480,15 @@ Bool DemoExecute()
 
 
 
+
+
     Frame_SetDrawHandle(frame, drawHandle);
+
+
+
+    Frame_SetDrawHandleArg(frame, drawHandleArg);
+
+
 
 
 
