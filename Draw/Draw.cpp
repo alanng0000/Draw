@@ -46,6 +46,7 @@ Bool Draw_Draw_Init(Object o)
 
 
 
+
     Int handle;
 
     handle = Draw_Draw_GetHandle(o);
@@ -56,6 +57,68 @@ Bool Draw_Draw_Init(Object o)
 
     size = Draw_Draw_GetSize(o);
 
+
+
+
+    HDC hdc;
+
+    hdc = (HDC)handle;
+
+
+
+
+    Int width;
+
+    width = Size_GetWidth(size);
+
+
+
+    Int height;
+
+    height = Size_GetHeight(size);
+
+
+
+
+    int w;
+
+    w = (int)width;
+
+
+    int h;
+
+    h = (int)height;
+
+
+
+
+
+    Gdiplus::Bitmap* bmp;
+    
+    bmp = new Gdiplus::Bitmap(w, h);
+
+
+    m->Bitmap = bmp;
+
+
+
+
+    Gdiplus::Graphics* graphic;
+    
+    graphic = new Gdiplus::Graphics(&bmp);
+
+
+    m->Graphic = graphic;
+
+
+
+
+    Gdiplus::Graphics* handleGraphic;
+    
+    handleGraphic = new Gdiplus::Graphics(hdc);
+    
+
+    m->HandleGraphic = handleGraphic;
 
 
 
@@ -150,47 +213,7 @@ Draw* Draw_Draw_Pointer(Object o)
 
 Bool Draw_FrameDrawHandle(Object frame, Object arg)
 {
-    HDC hdc;
 
-    hdc = (HDC)handle;
-
-
-
-    Object size;
-
-    size = Frame_GetSize(frame);
-
-
-
-    Int width;
-
-    width = Size_GetWidth(size);
-
-
-
-    Int height;
-
-    height = Size_GetHeight(size);
-
-
-
-    int w;
-
-    w = (int)width;
-
-
-    int h;
-
-    h = (int)height;
-
-
-
-
-
-    Gdiplus::Bitmap bmp(w, h);
-
-
-    Gdiplus::Graphics graphics(&bmp);
 
 
 
@@ -223,7 +246,6 @@ Bool Draw_FrameDrawHandle(Object frame, Object arg)
 
 
 
-    Gdiplus::Graphics g(hdc);
 
     g.DrawImage(&bmp, 0, 0);
 
