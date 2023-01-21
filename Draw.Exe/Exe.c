@@ -300,22 +300,22 @@ Bool ControlHandleConsoleWriteKeyValue(Int controlKey, Int controlValue)
 
 Bool DrawExecute(Object draw)
 {
-    int left;
+    SInt left;
 
     left = 100;
 
 
-    int up;
+    SInt up;
 
     up = 100;
 
 
-    int width;
+    Int width;
 
     width = 400;
 
 
-    int height;
+    Int height;
 
     height = 400;
 
