@@ -37,6 +37,19 @@ Bool Draw_Draw_SetHandle(Object o, Int value);
 
 
 
+Draw_Api
+Object Draw_Draw_GetSize(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Draw_SetSize(Object o, Object value);
+
+
+
+
+
 
 Draw_Api
 Bool Draw_Draw_Clear(Object o, Int color);
