@@ -7,9 +7,9 @@
 
 Object Draw_Constant_New()
 {
-    Global* m;
+    Constant* m;
 
-    m = new Global();
+    m = new Constant();
 
 
     Object o;
