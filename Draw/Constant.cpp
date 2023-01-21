@@ -48,6 +48,8 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+    m->FontStyleRegular = Gdiplus::FontStyleRegular;
+
 
     m->FontStyleBold = Gdiplus::FontStyleBold;
 

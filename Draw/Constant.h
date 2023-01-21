@@ -9,6 +9,8 @@
 
 struct Constant
 {
+    Int FontStyleRegular;
+
     Int FontStyleBold;
 
     Int FontStyleItalic;
