@@ -50,6 +50,19 @@ Bool Draw_Draw_SetSize(Object o, Object value);
 
 
 
+Draw_Api
+Int Draw_Draw_GetMethod(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Draw_SetMethod(Object o, Int value);
+
+
+
+
+
 
 Draw_Api
 Bool Draw_Draw_Clear(Object o, Int color);
@@ -95,7 +108,7 @@ Bool Draw_FrameDrawHandle(Object frame, Object arg);
 
 
 
-typedef Bool (*Draw_DrawHandle_Method)(Object draw);
+typedef Bool (*Draw_Draw_Method)(Object draw);
 
 
 
