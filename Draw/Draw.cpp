@@ -105,7 +105,7 @@ Bool Draw_Draw_Init(Object o)
 
     Gdiplus::Graphics* graphic;
     
-    graphic = new Gdiplus::Graphics(bmp);
+    graphic = new Gdiplus::Graphics(m->Bitmap);
 
 
     m->Graphic = graphic;
