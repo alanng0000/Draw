@@ -81,11 +81,11 @@ Int Draw_Image_GetStream(Object o)
 
 
 
-Bool Draw_Draw_SetStream(Object o, Int value)
+Bool Draw_Image_SetStream(Object o, Int value)
 {
-    Draw* m;
+    Image* m;
 
-    m = Draw_Draw_Pointer(o);
+    m = Draw_Image_Pointer(o);
 
 
 
