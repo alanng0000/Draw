@@ -19,3 +19,9 @@ struct FontFamily
 
     Gdiplus::FontFamily* FontFamily;
 };
+
+
+
+
+
+FontFamily* Draw_FontFamily_Pointer(Object o);
