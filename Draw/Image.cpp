@@ -44,6 +44,20 @@ Bool Draw_Image_Delete(Object o)
 
 Bool Draw_Image_Init(Object o)
 {
+    Image* m;
+
+    m = Draw_Image_Pointer(o);
+
+
+
+    Gdiplus::Bitmap* bitmap;
+
+    bitmap = new Gdiplus::Bitmap(m->Stream);
+
+
+    m->Bitmap = bitmap;
+
+
     return true;
 }
 
@@ -53,6 +67,16 @@ Bool Draw_Image_Init(Object o)
 
 Bool Draw_Image_Final(Object o)
 {
+    Image* m;
+
+    m = Draw_Image_Pointer(o);
+
+
+
+    delete m->Bitmap;
+    
+
+
     return true;
 }
 
