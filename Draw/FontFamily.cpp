@@ -98,6 +98,30 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
+Bool Draw_FontFamily_Final(Object o)
+{
+    FontFamily* m;
+
+    m = Draw_FontFamily_Pointer(o);
+
+
+
+    delete m->FontFamily;
+
+
+    delete[] m->NameWChar;
+
+
+
+    return true;
+}
+
+
+
+
+
+
+
 Object Draw_FontFamily_GetName(Object o)
 {
     FontFamily* m;
