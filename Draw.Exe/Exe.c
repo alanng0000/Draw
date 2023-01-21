@@ -11,7 +11,7 @@ Object Brush;
 
 
 
-Int Comp;
+Byte Comp;
 
 
 
@@ -325,7 +325,7 @@ Bool DrawHandle(Object frame)
     Int color;
 
 
-    color = 0xff000000;
+    color = 0x80000000;
 
 
     color = color | Comp;
