@@ -3,7 +3,7 @@
 
 
 
-#include <Infra/Public.h>
+#include <Infra.h>
 
 
 
@@ -24,6 +24,12 @@
 Draw_Api
 Bool Draw_Draw_Create(Int result, Int handle);
 
+
+
+
+
+Draw_Api
+Bool Draw_Draw_Clear(Object o, Int color);
 
 
 

@@ -325,10 +325,20 @@ Bool DrawHandle(Object draw)
     Int color;
 
 
-    color = 0x80000000;
+    color = 0x80000010;
 
 
-    color = color | 0xff;
+    //color = color | 0xff;
+
+
+
+    Int clearColor;
+
+    clearColor = 0xffffffff;
+
+
+
+    Draw_Draw_Clear(draw, clearColor);
 
 
 
@@ -442,7 +452,7 @@ Bool DemoExecute()
     Object drawHandleArg;
 
     drawHandleArg = CastInt(&DrawHandle);
-    
+
 
 
 

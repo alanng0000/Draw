@@ -11,7 +11,41 @@ Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg)
 
 
 
-    Gdiplus::Graphics graphics(hdc);
+    Object size;
+
+    size = Frame_GetSize(frame);
+
+
+
+    Int width;
+
+    width = Size_GetWidth(size);
+
+
+
+    Int height;
+
+    height = Size_GetHeight(size);
+
+
+
+    int w;
+
+    w = (int)width;
+
+
+    int h;
+
+    h = (int)height;
+
+
+
+
+
+    Gdiplus::Bitmap bmp(w, h);
+
+
+    Gdiplus::Graphics graphics(&bmp);
 
 
 
@@ -44,10 +78,52 @@ Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg)
 
 
 
+    Gdiplus::Graphics g(hdc);
+
+    //g.Flush(Gdiplus::FlushIntention::FlushIntentionSync);
+
+    g.DrawImage(&bmp, 0, 0);
+
+    //g.Flush(Gdiplus::FlushIntention::FlushIntentionSync);
+
 
     return true;
 }
 
+
+
+
+
+
+Bool Draw_Draw_Clear(Object o, Int color)
+{
+    Gdiplus::Graphics* m;
+
+    m = (Gdiplus::Graphics*)o;
+
+
+
+
+    Gdiplus::ARGB argb;
+
+    argb = (Gdiplus::ARGB)color;
+
+
+
+
+    Gdiplus::Color c;
+
+    c.SetValue(argb);
+    
+
+
+
+    m->Clear(c);
+
+
+
+    return true;
+}
 
 
 
