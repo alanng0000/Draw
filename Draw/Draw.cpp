@@ -52,7 +52,10 @@ Bool Draw_Draw_Init(Object o)
 
 
 
-    
+    Object size;
+
+    size = Draw_Draw_GetSize(o);
+
 
 
 
@@ -91,6 +94,40 @@ Bool Draw_Draw_SetHandle(Object o, Int value)
 
     return true;
 }
+
+
+
+
+
+
+
+Object Draw_Draw_GetSize(Object o)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+    return m->Size;
+}
+
+
+
+
+
+Bool Draw_Draw_SetSize(Object o, Object value)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+    m->Size = value;
+
+
+    return true;
+}
+
 
 
 
