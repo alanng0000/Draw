@@ -198,7 +198,7 @@ Bool Draw_Draw_SetSize(Object o, Object value)
 
 
 
-Draw_Draw_Method Frame_GetMethod(Object this)
+Draw_Draw_Method Draw_Draw_GetMethod(Object this)
 {
     Frame* m;
     
