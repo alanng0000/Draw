@@ -184,6 +184,22 @@ Object Draw_Image_GetSize(Object o)
 
 
 
+Gdiplus::Bitmap* Draw_Image_GetBitmap(Object o)
+{
+    Image* m;
+
+    m = Draw_Image_Pointer(o);
+
+
+    return m->Bitmap;
+}
+
+
+
+
+
+
+
 Image* Draw_Image_Pointer(Object o)
 {
     Image* m;
