@@ -482,9 +482,9 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
-    Rect destRect;
+    Gdiplus::Rect destRect;
 
-    destRect = Rect(destLeft, destUp, destWidth, destHeight);
+    destRect = Gdiplus::Rect(destLeft, destUp, destWidth, destHeight);
 
 
 
