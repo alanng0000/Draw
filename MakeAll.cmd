@@ -18,7 +18,7 @@ SET OutFold=..\..\%OutFoldName%
 SET Module=Draw
 
 
-CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Infra.lib %OutFold%\Infra.Form.Infra.lib Gdiplus.lib" "1"
+CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Infra.lib %OutFold%\Infra.Form.Infra.lib %OutFold%\Infra.Form.Windows.lib Gdiplus.lib" "1"
 
 
 
