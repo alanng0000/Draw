@@ -48,6 +48,11 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+
+    m->DefaultColor = 0xffffffff;
+
+
+
     m->FontStyleRegular = Gdiplus::FontStyleRegular;
 
 
@@ -73,6 +78,23 @@ Bool Draw_Constant_Final(Object o)
 {
     return true;
 }
+
+
+
+
+
+
+Int Draw_Constant_DefaultColor(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    return m->DefaultColor;
+}
+
 
 
 

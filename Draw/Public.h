@@ -198,6 +198,11 @@ Bool Draw_Font_SetStyle(Object o, Int value);
 
 
 
+Draw_Api
+Int Draw_Constant_DefaultColor(Object o);
+
+
+
 
 Draw_Api
 Int Draw_Constant_FontStyleRegular(Object o);

@@ -9,6 +9,9 @@
 
 struct Constant
 {
+    Int DefaultColor;
+
+
     Int FontStyleRegular;
 
     Int FontStyleBold;

@@ -26,7 +26,6 @@ Bool Draw_Init()
 
 
 
-    Draw_Draw_Constant_DefaultColor = 0xffffffff;
 
 
 

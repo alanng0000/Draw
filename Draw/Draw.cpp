@@ -319,11 +319,6 @@ Draw* Draw_Draw_Pointer(Object o)
 
 
 
-Int Draw_Draw_Constant_DefaultColor;
-
-
-
-
 
 Bool Draw_FrameDrawHandle(Object arg)
 {
