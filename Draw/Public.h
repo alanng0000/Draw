@@ -53,3 +53,16 @@ Int Draw_ColorBrush_GetColor(Object o);
 
 Draw_Api
 Bool Draw_ColorBrush_SetColor(Object o, Int value);
+
+
+
+
+
+Draw_Api
+Bool Draw_Init();
+
+
+
+
+Draw_Api
+Bool Draw_Final();
