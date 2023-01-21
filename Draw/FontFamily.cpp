@@ -55,11 +55,6 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
-    Int data;
-
-    data = String_GetData(name);
-
-
 
     Int length;
 
@@ -82,9 +77,12 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
+    Draw_FontFamily_CopyString(u, name)
+
+
+
 
     m->NameWChar = u;
-
 
 
 
@@ -140,4 +138,53 @@ FontFamily* Draw_FontFamily_Pointer(Object o)
 
 
     return m;
+}
+
+
+
+
+
+
+
+Bool Draw_FontFamily_CopyString(WCHAR* result, Object string)
+{
+    Int count = String_GetLength(string);
+
+
+
+    Int w = 0;
+
+
+
+    WCHAR o = L'\0';
+
+
+
+    Int i;
+    
+    i = 0;
+
+
+    while (i < count)
+    {
+        w = String_Char(string, i);
+
+
+        o = (WCHAR)w;
+
+
+        result[i] = o;
+
+
+
+        i = i + 1;
+    }
+
+
+
+    result[count] = L'\0';
+
+
+
+    return true;
 }
