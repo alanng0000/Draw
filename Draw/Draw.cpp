@@ -4,6 +4,47 @@
 
 
 
+Object Draw_Draw_New()
+{
+    Draw* m;
+
+    m = new Draw();
+
+
+    Object o;
+
+    o = CastInt(m);
+
+
+    return o;
+}
+
+
+
+
+Bool Draw_Draw_Delete(Object o)
+{
+    void* p;
+
+    p = CastPointer(o);
+
+
+    delete p;
+
+
+    return true;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 Int Draw_Draw_GetHandle(Object o)
 {
