@@ -28,4 +28,4 @@ struct Image
 
 
 
-Draw* Draw_Draw_Pointer(Object o);
+Image* Draw_Image_Pointer(Object o);
