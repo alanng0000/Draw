@@ -17,6 +17,9 @@ ULONG_PTR           gdiplusToken;
 }
 
 
+
+
+
 Bool Draw_Init()
 {
     Gdiplus::GdiplusStartup(& Draw::Private::gdiplusToken, & Draw::Private::gdiplusStartupInput, NULL);
