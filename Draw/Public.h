@@ -18,7 +18,7 @@
 
 
 
-ObjectApi(Draw, Draw);
+ObjectApi(Draw, Draw)
 
 
 
@@ -78,13 +78,13 @@ Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int h
 
 
 
-Draw_Api
-Object Draw_ColorBrush_New();
+
+
+ObjectApi(Draw, ColorBrush)
 
 
 
-Draw_Api
-Bool Draw_ColorBrush_Delete(Object o);
+
 
 
 
