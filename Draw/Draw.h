@@ -45,3 +45,7 @@ struct Draw
 
 
 Draw* Draw_Draw_Pointer(Object o);
+
+
+
+Draw_Draw_Method Draw_Draw_GetMethodAddress(Object o);
