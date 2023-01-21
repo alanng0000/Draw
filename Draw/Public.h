@@ -9,9 +9,9 @@
 
 
 #ifdef Draw_Module
-#define Draw_Api __declspec(dllexport)
+#define Draw_Api ExportApi
 #else
-#define Draw_Api __declspec(dllimport)
+#define Draw_Api ImportApi
 #endif
 
 
