@@ -88,7 +88,7 @@ Bool Draw_ColorBrush_SetColor(Object o, Int value);
 
 
 Draw_Api
-Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg);
+Bool Draw_FrameDrawHandle(Object frame, Object arg);
 
 
 
