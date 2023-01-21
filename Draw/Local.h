@@ -39,3 +39,22 @@ Gdiplus::Bitmap* Draw_Image_GetBitmap(Object o);
 
 
 Gdiplus::FontFamily* Draw_FontFamily_GetInternal(Object o);
+
+
+
+
+
+
+Object Draw_Constant_New();
+
+
+
+Bool Draw_Constant_Delete(Object o);
+
+
+
+Bool Draw_Constant_Init(Object o);
+
+
+
+Bool Draw_Constant_Final(Object o);
