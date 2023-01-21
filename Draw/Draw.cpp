@@ -475,16 +475,67 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
-    Gdiplus::Bitmap* bitmap;
+    Gdiplus::Image* mm;
 
-    bitmap = Draw_Image_GetBitmap(image);
+    mm = Draw_Image_GetBitmap(image);
+
+
+
+    
+    int destL;
+
+    destL = (int)destLeft;
+
+
+    int destU;
+
+    destU = (int)destUp;
+
+
+    int destW;
+
+    destW = (int)destWidth;
+
+
+    int destH;
+
+    destH = (int)destHeight;
+
 
 
 
 
     Gdiplus::Rect destRect;
 
-    destRect = Gdiplus::Rect(destLeft, destUp, destWidth, destHeight);
+    destRect = Gdiplus::Rect(destL, destU, destW, destH);
+
+
+
+
+
+    int sourceL;
+
+    sourceL = (int)sourceLeft;
+
+
+    int sourceU;
+
+    sourceU = (int)sourceUp;
+
+
+    int sourceW;
+
+    sourceW = (int)sourceWidth;
+
+
+    int sourceH;
+
+    sourceH = (int)sourceHeight;
+
+
+
+
+    m->Graphic->DrawImage(mm, destRect, sourceL, sourceU, sourceW, sourceH);
 
 
 
