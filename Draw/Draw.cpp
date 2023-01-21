@@ -280,8 +280,6 @@ Bool Draw_Draw_Finish(Object o)
 
 
 
-
-
 Draw* Draw_Draw_Pointer(Object o)
 {
     Draw* m;
@@ -291,6 +289,8 @@ Draw* Draw_Draw_Pointer(Object o)
 
     return m;
 }
+
+
 
 
 
