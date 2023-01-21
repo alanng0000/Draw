@@ -15,6 +15,9 @@ extern Int Draw_Draw_Constant_DefaultColor;
 
 
 
+extern Object Draw_Global_Data;
+
+
 
 }
 
