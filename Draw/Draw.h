@@ -31,6 +31,9 @@ struct Draw
 
 
     Int Handle;
+
+
+    Object Size;
 };
 
 

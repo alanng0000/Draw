@@ -38,7 +38,26 @@ Bool Draw_Draw_Delete(Object o)
 
 
 
+Bool Draw_Draw_Init(Object o)
+{
+    Draw* m;
 
+    m = Draw_Draw_Pointer(o);
+
+
+
+    Int handle;
+
+    handle = Draw_Draw_GetHandle(o);
+
+
+
+    
+
+
+
+    return true;
+}
 
 
 
