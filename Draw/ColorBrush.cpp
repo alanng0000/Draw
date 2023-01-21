@@ -6,15 +6,18 @@
 
 Object Draw_ColorBrush_New()
 {
-    Graphics::SolidBrush* o;
+    Gdiplus::Color color;
 
-    o = new Graphics::SolidBrush();
+
+    Gdiplus::SolidBrush* o;
+
+    o = new Gdiplus::SolidBrush(color);
 
 
 
     Object u;
 
-    u = Castnt(o);
+    u = CastInt(o);
 
 
     return u;
@@ -34,4 +37,31 @@ Bool Draw_ColorBrush_Delete(Object o)
 
 
     return true;
+}
+
+
+
+
+
+Int Draw_ColorBrush_GetColor(Object o)
+{
+    Gdiplus::SolidBrush* m;
+
+    m = (Gdiplus::SolidBrush*)o;
+
+
+
+    Gdiplus::Color color;
+
+
+    m->GetColor(&color);
+
+
+
+    Gdiplus::ARGB u;
+
+    u = color.GetValue();
+
+
+    return u;
 }
