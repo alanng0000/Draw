@@ -462,3 +462,7 @@ Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int h
 
     return true;
 }
+
+
+
+

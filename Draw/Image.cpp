@@ -41,7 +41,6 @@ Bool Draw_Image_Delete(Object o)
 
 
 
-
 Bool Draw_Image_Init(Object o)
 {
     Image* m;
@@ -56,6 +55,40 @@ Bool Draw_Image_Init(Object o)
 
 
     m->Bitmap = bitmap;
+
+
+
+
+    Int width;
+
+    width = m->Bitmap->GetWidth();
+
+
+    Int height;
+
+    height = m->Bitmap->GetHeight();
+
+
+
+
+    Object size;
+
+
+    size = Size_New();
+
+
+    Size_Init(size);
+
+
+    Size_SetWidth(size, width);
+
+
+    Size_SetHeight(size, height);
+
+
+
+    m->Size = size;
+
 
 
     return true;
@@ -74,7 +107,14 @@ Bool Draw_Image_Final(Object o)
 
 
     delete m->Bitmap;
-    
+
+
+
+    Size_Final(m->Size);
+
+
+    Size_Delete(m->Size);
+
 
 
     return true;
@@ -123,6 +163,22 @@ Bool Draw_Image_SetStream(Object o, Int value)
 
     return true;
 }
+
+
+
+
+
+
+Object Draw_Image_GetSize(Object o)
+{
+    Image* m;
+
+    m = Draw_Image_Pointer(o);
+
+
+    return m->Size;
+}
+
 
 
 

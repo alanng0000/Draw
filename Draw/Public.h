@@ -118,6 +118,13 @@ Bool Draw_Image_SetStream(Object o, Int value);
 
 
 
+Draw_Api
+Object Draw_Image_GetSize(Object o);
+
+
+
+
+
 
 
 Draw_Api
