@@ -30,6 +30,11 @@ struct Draw
     Gdiplus::Bitmap* Bitmap;
 
 
+
+    Draw_DrawHandle_Method DrawMethod;
+
+
+
     Int Handle;
 
 
