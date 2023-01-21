@@ -65,3 +65,33 @@ Int Draw_ColorBrush_GetColor(Object o)
 
     return u;
 }
+
+
+
+
+
+Bool Draw_ColorBrush_SetColor(Object o, Int value)
+{
+    Gdiplus::SolidBrush* m;
+
+    m = (Gdiplus::SolidBrush*)o;
+
+
+
+    Gdiplus::ARGB argb;
+
+    argb = (Gdiplus::ARGB)value;
+
+
+
+    Gdiplus::Color color;
+
+    color.SetValue(argb);
+
+
+
+    m->SetColor(color);
+
+
+    return true;
+}
