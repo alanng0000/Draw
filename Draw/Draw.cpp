@@ -129,6 +129,29 @@ Bool Draw_Draw_Init(Object o)
 
 
 
+Bool Draw_Draw_Final(Object o)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+
+    delete m->Graphic;
+
+
+    delete m->Bitmap;
+
+
+    delete m->HandleGraphic;
+
+
+
+    return true;
+}
+
+
+
 
 
 Int Draw_Draw_GetHandle(Object o)
