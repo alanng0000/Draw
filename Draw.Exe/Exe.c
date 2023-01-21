@@ -515,6 +515,12 @@ Bool DemoExecute()
 
 
 
+    Draw_ColorBrush_Init(Brush);
+
+
+
+
+
 
 
     Frame_SetControlHandle(frame, controlHandle);
