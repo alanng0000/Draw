@@ -577,6 +577,12 @@ Bool DrawExecute(Object draw)
 
     Draw_Draw_Rect(draw, Brush, left, up, width, height);
 
+
+
+
+
+    Draw_Draw_Image(draw, Image, 400, 400, 800, 400, 600, 600, 800, 400);
+
     
 
 
@@ -757,7 +763,12 @@ Bool DemoExecute()
 
 
 
+
     StorageExecute();
+
+
+
+    StreamExecute();
 
 
 
@@ -767,6 +778,17 @@ Bool DemoExecute()
 
 
 
+    Int streamU;
+
+    streamU = CastInt(Stream);
+
+
+
+    Draw_Image_SetStream(Image, streamU);
+
+
+
+    Draw_Image_Init(Image);
 
 
 
