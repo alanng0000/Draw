@@ -110,61 +110,12 @@ Object Global_Constants(Object this)
 
 
 
-Object Infra_Form_Global_Data;
+Object Draw_Global_Data;
 
 
 
 
-Object Infra_Form_Global()
+Object Draw_Global()
 {
-    return Infra_Form_Global_Data;
-}
-
-
-
-
-Bool Infra_Form_Init()
-{
-    Object global;
-    
-    
-    
-    global = Global_New();
-
-
-
-    Global_Init(global);
-    
-
-
-
-    Infra_Form_Global_Data = global;
-
-
-
-    return true;
-}
-
-
-
-
-Bool Infra_Form_Final()
-{
-    Object global = Infra_Form_Global_Data;
-
-
-
-    Global_Final(global);
-
-
-
-    Global_Delete(global);
-
-
-
-    Infra_Form_Global_Data = null;
-    
-
-
-    return true;
+    return Draw_Global_Data;
 }
