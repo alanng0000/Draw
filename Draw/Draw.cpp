@@ -3,43 +3,38 @@
 
 
 
-Object Draw_Draw_Create(Int handle)
+Bool Draw_Handle(Object frame, Int handle, Object arg)
 {
     HDC hdc;
 
     hdc = (HDC)handle;
 
 
-
-    Gdiplus::Graphics* o;
-
-    o = new Gdiplus::Graphics(hdc);
-
-
-
-    Object a;
-
-    a = CastInt(o);
-
-
-    return a;
-}
+    Gdiplus::Graphics g(hdc);
 
 
 
 
-Bool Draw_Draw_Delete(Object o)
-{
-    void* p;
+    Gdiplus::Graphics* p;
 
-    p = CastPointer(o);
+    p = &g;
 
 
-    delete p;
+
+    Object o;
+
+    o = CastInt(p);
+
+
+
+
+
 
 
     return true;
 }
+
+
 
 
 

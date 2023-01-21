@@ -18,13 +18,13 @@
 
 
 
-Draw_Api
-Object Draw_Draw_Create(Int handle);
 
 
 
 Draw_Api
-Bool Draw_Draw_Delete(Object o);
+Bool Draw_Draw_Create(Int result, Int handle);
+
+
 
 
 
@@ -53,6 +53,18 @@ Int Draw_ColorBrush_GetColor(Object o);
 
 Draw_Api
 Bool Draw_ColorBrush_SetColor(Object o, Int value);
+
+
+
+
+Draw_Api
+Bool Draw_FrameDrawHandle(Object frame, Int handle, Object arg);
+
+
+
+
+typedef Bool (*Draw_DrawHandle_Method)(Object draw);
+
 
 
 

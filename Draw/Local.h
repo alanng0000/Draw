@@ -9,10 +9,3 @@ extern "C"
 
 
 }
-
-
-
-#include <windows.h>
-
-
-#include <gdiplus.h>
