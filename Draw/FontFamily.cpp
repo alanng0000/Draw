@@ -77,7 +77,7 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
-    Draw_FontFamily_CopyString(u, name)
+    Draw_FontFamily_CopyString(u, name);
 
 
 
