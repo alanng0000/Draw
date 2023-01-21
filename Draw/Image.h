@@ -24,3 +24,8 @@ struct Image
     IStream* Stream;
     Gdiplus::Bitmap* Bitmap;
 };
+
+
+
+
+Draw* Draw_Draw_Pointer(Object o);

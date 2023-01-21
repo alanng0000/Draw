@@ -97,6 +97,29 @@ Bool Draw_ColorBrush_SetColor(Object o, Int value);
 
 
 
+
+
+ObjectApi(Draw, Image)
+
+
+
+
+
+Draw_Api
+Int Draw_Image_GetStream(Object o);
+
+
+
+
+Draw_Api
+Bool Draw_Image_SetStream(Object o, Int value);
+
+
+
+
+
+
+
 Draw_Api
 Bool Draw_FrameDrawHandle(Object arg);
 
