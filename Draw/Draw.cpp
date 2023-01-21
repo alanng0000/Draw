@@ -93,12 +93,12 @@ Bool Draw_Draw_Init(Object o)
 
 
 
-    Gdiplus::Bitmap* bmp;
+    Gdiplus::Bitmap* bitmap;
     
-    bmp = new Gdiplus::Bitmap(w, h);
+    bitmap = new Gdiplus::Bitmap(w, h);
 
 
-    m->Bitmap = bmp;
+    m->Bitmap = bitmap;
 
 
 
@@ -356,9 +356,10 @@ Bool Draw_FrameDrawHandle(Object frame, Object arg)
 
 Bool Draw_Draw_Clear(Object o, Int color)
 {
-    Gdiplus::Graphics* m;
+    Draw* m;
 
-    m = (Gdiplus::Graphics*)o;
+    m = Draw_Draw_Pointer(o);
+
 
 
 
@@ -377,7 +378,7 @@ Bool Draw_Draw_Clear(Object o, Int color)
 
 
 
-    m->Clear(c);
+    m->Graphic->Clear(c);
 
 
 
