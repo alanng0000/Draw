@@ -141,13 +141,13 @@ ObjectApi(Draw, FontFamily)
 
 
 Draw_Api
-Int Draw_FontFamily_GetName(Object o);
+Object Draw_FontFamily_GetName(Object o);
 
 
 
 
 Draw_Api
-Bool Draw_FontFamily_SetName(Object o, Int value);
+Bool Draw_FontFamily_SetName(Object o, Object value);
 
 
 

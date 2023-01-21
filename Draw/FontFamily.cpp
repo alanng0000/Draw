@@ -49,6 +49,46 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
+    Object name;
+
+    name = m->Name;
+
+
+
+    Int data;
+
+    data = String_GetData(name);
+
+
+
+    Int length;
+
+    length = String_GetLength(name);
+
+
+
+
+    Int bufferLength;
+
+    bufferLength = length + 1;
+
+
+    
+    
+    WCHAR* o;
+
+    o = new WCHAR[bufferLength]();
+
+
+
+
+
+    m->NameWChar = o;
+
+
+
+
+    m->FontFmaily = new Gdiplus::FontFamily(m->NameWChar);
 
 
 
@@ -60,7 +100,7 @@ Bool Draw_FontFamily_Init(Object o)
 
 
 
-Int Draw_FontFamily_GetName(Object o)
+Object Draw_FontFamily_GetName(Object o)
 {
     FontFamily* m;
 
@@ -74,7 +114,7 @@ Int Draw_FontFamily_GetName(Object o)
 
 
 
-Bool Draw_FontFamily_SetName(Object o, Int value)
+Bool Draw_FontFamily_SetName(Object o, Object value)
 {
     FontFamily* m;
 

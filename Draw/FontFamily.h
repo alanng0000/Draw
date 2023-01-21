@@ -13,5 +13,9 @@
 
 struct FontFamily
 {
-    Int Name;
+    Object Name;
+    
+    WCHAR* NameWChar;
+
+    Gdiplus::FontFamily* FontFamily;
 };
