@@ -8,17 +8,6 @@
 
 
 
-
-
-#include <windows.h>
-
-
-#include <gdiplus.h>
-
-
-
-
-
 struct Draw
 {
     Gdiplus::Graphics* Graphic;

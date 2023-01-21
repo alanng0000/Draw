@@ -466,3 +466,27 @@ Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int h
 
 
 
+Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int destWidth, Int destHeight,
+    SInt sourceLeft, SInt sourceUp, Int sourceWidth, Int sourceHeight)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+
+    Gdiplus::Bitmap* bitmap;
+
+    bitmap = Draw_Image_GetBitmap(image);
+
+
+
+
+    Rect destRect;
+
+    destRect = Rect(destLeft, destUp, destWidth, destHeight);
+
+
+
+    return true;
+}

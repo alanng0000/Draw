@@ -10,11 +10,6 @@
 
 
 
-#include <windows.h>
-
-
-#include <gdiplus.h>
-
 
 
 
