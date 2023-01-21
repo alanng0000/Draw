@@ -31,7 +31,7 @@ struct Draw
 
 
 
-    Draw_DrawHandle_Method DrawMethod;
+    Draw_Draw_Method DrawMethod;
 
 
 

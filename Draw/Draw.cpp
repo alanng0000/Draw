@@ -197,6 +197,70 @@ Bool Draw_Draw_SetSize(Object o, Object value)
 
 
 
+
+Draw_Draw_Method Frame_GetMethod(Object this)
+{
+    Frame* m;
+    
+    m = CastPointer(this);
+
+
+
+    return m->DrawHandle;
+}
+
+
+
+
+
+
+Int Frame_GetDrawHandle(Object this)
+{
+    Frame_DrawHandle_Method method;
+
+    method = Frame_GetDrawHandleMethod(this);
+
+
+    Int o;
+
+    o = CastInt(method);
+
+
+    return o;
+}
+
+
+
+
+
+Bool Frame_SetDrawHandle(Object this, Int value)
+{
+    Frame* m;
+    
+    m = CastPointer(this);
+
+
+
+    Frame_DrawHandle_Method method;
+
+    method = CastPointer(value);
+
+
+
+    m->DrawHandle = method;
+
+
+    return true;
+}
+
+
+
+
+
+
+
+
+
 Draw* Draw_Draw_Pointer(Object o)
 {
     Draw* m;
@@ -206,6 +270,13 @@ Draw* Draw_Draw_Pointer(Object o)
 
     return m;
 }
+
+
+
+
+
+
+
 
 
 
