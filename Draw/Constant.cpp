@@ -78,6 +78,68 @@ Bool Draw_Constant_Final(Object o)
 
 
 
+Int Draw_Constant_FontStyleRegular(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    return m->FontStyleRegular;
+}
+
+
+
+
+
+Int Draw_Constant_FontStyleBold(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    return m->FontStyleBold;
+}
+
+
+
+
+
+Int Draw_Constant_FontStyleItalic(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    return m->FontStyleItalic;
+}
+
+
+
+
+
+Int Draw_Constant_FontStyleUnderline(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    return m->FontStyleUnderline;
+}
+
+
+
+
+
+
+
 Constant* Draw_Constant_Pointer(Object o)
 {
     Constant* m;
