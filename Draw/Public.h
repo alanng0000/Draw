@@ -199,6 +199,29 @@ Bool Draw_Font_SetStyle(Object o, Int value);
 
 
 
+Draw_Api
+Int Draw_Constant_FontStyleRegular(Object o);
+
+
+
+Draw_Api
+Int Draw_Constant_FontStyleBold(Object o);
+
+
+
+Draw_Api
+Int Draw_Constant_FontStyleItalic(Object o);
+
+
+
+Draw_Api
+Int Draw_Constant_FontStyleUnderline(Object o);
+
+
+
+
+
+
 
 Draw_Api
 Object Draw_Global_Constant(Object o);
