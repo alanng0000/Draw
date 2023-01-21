@@ -11,7 +11,146 @@ Object Brush;
 
 
 
+Objet Image;
+
+
+
+
+
 Byte Comp;
+
+
+
+
+
+
+
+
+
+Bool StorageStringSet(Object string, Int charArray)
+{
+    Int k = String_ConstantLength(charArray);
+
+
+
+    Int length = k + 1;
+
+
+
+    String_SetLength(string, length);
+
+
+    String_SetData(string, charArray);
+
+
+
+    return true;
+}
+
+
+
+
+
+
+
+Bool StorageExecute()
+{
+    Int ca = CastInt("demo.txt");
+
+
+
+
+
+    Object name = String_New();
+
+
+
+    String_Init(name);
+
+
+
+
+
+    StorageStringSet(name, ca);
+
+
+
+
+
+    Object storage = Storage_New();
+
+
+
+
+    Storage_Init(storage);
+
+
+
+
+
+    Storage_SetName(storage, name);
+
+
+
+
+
+
+    Storage_SetMode(storage, 0);
+
+
+
+
+
+    Storage_Open(storage);
+
+
+
+
+    Int size = 11;
+
+
+
+
+    Int o = New(size);
+
+
+
+    Int buffer = o;
+
+
+
+
+    Object data;
+
+
+    data = Data_New();
+
+
+
+    Data_Init(data);
+
+
+
+    Data_SetSize(data, size);
+
+
+    Data_SetValue(data, buffer);
+
+
+
+
+
+    Storage_Read(storage, data);
+
+
+
+
+    return true;
+}
+
+
+
+
 
 
 
@@ -516,6 +655,18 @@ Bool DemoExecute()
 
 
     Draw_ColorBrush_Init(Brush);
+
+
+
+
+
+
+
+    Image = Draw_Image_New();
+
+
+
+
 
 
 
