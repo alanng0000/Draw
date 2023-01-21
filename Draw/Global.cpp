@@ -125,6 +125,20 @@ Object Draw_Global_Constant(Object o)
 
 
 
+Global* Draw_Global_Pointer(Object o)
+{
+    Global* m;
+
+    m = (Global*)o;
+
+
+    return m;
+}
+
+
+
+
+
 Object Draw_Global_Data;
 
 
