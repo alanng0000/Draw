@@ -3,10 +3,51 @@
 
 
 
-Object Draw_Draw_Create(Int handle)
+
+
+Int Draw_Draw_GetHandle(Object o)
 {
-    
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+    return m->Handle;
 }
+
+
+
+
+
+Bool Draw_Draw_SetHandle(Object o, Int value)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+    m->Handle = value;
+
+
+    return true;
+}
+
+
+
+
+
+
+Draw* Draw_Draw_Pointer(Object o)
+{
+    Draw* m;
+
+    m = (Draw*)o;
+
+
+    return m;
+}
+
+
 
 
 

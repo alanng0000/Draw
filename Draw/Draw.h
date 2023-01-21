@@ -14,3 +14,17 @@
 
 
 #include <gdiplus.h>
+
+
+
+
+
+struct Draw
+{
+    Int Handle;
+};
+
+
+
+
+Draw* Draw_Draw_Pointer(Object o);
