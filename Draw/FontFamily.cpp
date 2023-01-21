@@ -74,21 +74,21 @@ Bool Draw_FontFamily_Init(Object o)
 
 
     
-    
-    WCHAR* o;
 
-    o = new WCHAR[bufferLength]();
+    WCHAR* u;
 
-
-
-
-
-    m->NameWChar = o;
+    u = new WCHAR[bufferLength]();
 
 
 
 
-    m->FontFmaily = new Gdiplus::FontFamily(m->NameWChar);
+
+    m->NameWChar = u;
+
+
+
+
+    m->FontFamily = new Gdiplus::FontFamily(m->NameWChar);
 
 
 
