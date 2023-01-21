@@ -13,5 +13,5 @@
 
 struct FontFamily
 {
-    const WCHAR* Name;
+    Int Name;
 };
