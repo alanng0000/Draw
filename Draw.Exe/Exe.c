@@ -48,6 +48,13 @@ Int TextLength;
 
 
 
+SInt Left;
+
+
+SInt Up;
+
+
+
 
 Bool StorageStringSet(Object string, Int charArray)
 {
@@ -608,7 +615,7 @@ Bool DrawExecute(Object draw)
     
 
 
-    Draw_Draw_Text(draw, Text, TextLength, Font, 600, 850, 400, 200, Brush);
+    Draw_Draw_Text(draw, Text, TextLength, Font, Left + 600, Up + 850, 400, 200, Brush);
 
 
 
@@ -642,7 +649,7 @@ Bool ControlHandle(Object frame, Int key, Int value)
 
 
 
-    if (key == 'A')
+    if (key == 'B')
     {
         Comp = Comp + 10;
 
@@ -651,6 +658,44 @@ Bool ControlHandle(Object frame, Int key, Int value)
     }
 
 
+
+    if (key == 'A')
+    {
+        Left = Left - 10;
+
+
+        Frame_Update(frame);
+    }
+
+
+
+    if (key == 'D')
+    {
+        Left = Left + 10;
+
+
+        Frame_Update(frame);
+    }
+
+
+
+    if (key == 'W')
+    {
+        Up = Up - 10;
+
+
+        Frame_Update(frame);
+    }
+    
+
+
+    if (key == 'S')
+    {
+        Up = Up + 10;
+
+
+        Frame_Update(frame);
+    }
 
 
 
