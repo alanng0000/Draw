@@ -559,3 +559,12 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
     return true;
 }
+
+
+
+
+
+Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, Int rectLeft, Int rectUp, Int rectWidth, Int rectHeight, Object brush)
+{
+    return true;
+}
