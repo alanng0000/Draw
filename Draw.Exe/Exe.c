@@ -56,6 +56,22 @@ SInt Up;
 
 
 
+SInt ClipLeft;
+
+
+SInt ClipUp;
+
+
+
+
+
+Object FrameSize;
+
+
+
+
+
+
 Bool StorageStringSet(Object string, Int charArray)
 {
     Int k = String_ConstantLength(charArray);
@@ -556,6 +572,24 @@ Bool ControlHandleConsoleWriteKeyValue(Int controlKey, Int controlValue)
 
 Bool DrawExecute(Object draw)
 {
+    Int clipWidth;
+
+    clipWidth = 800;
+
+
+    Int clipHeight;
+
+    clipHeight = 600;
+
+
+
+    Draw_Draw_Clip(draw, ClipLeft, ClipLeft, clipWidth, clipHeight);
+
+
+
+
+
+
     SInt left;
 
     left = 100;
@@ -700,6 +734,52 @@ Bool ControlHandle(Object frame, Int key, Int value)
 
 
 
+
+
+    if (key == 'J')
+    {
+        ClipLeft = ClipLeft - 10;
+
+
+        Frame_Update(frame);
+    }
+
+
+
+    if (key == 'L')
+    {
+        ClipLeft = ClipLeft + 10;
+
+
+        Frame_Update(frame);
+    }
+
+
+
+    if (key == 'I')
+    {
+        ClipUp = ClipUp - 10;
+
+
+        Frame_Update(frame);
+    }
+    
+
+
+    if (key == 'K')
+    {
+        ClipUp = ClipUp + 10;
+
+
+        Frame_Update(frame);
+    }
+
+
+
+
+
+
+
     return true;
 }
 
@@ -787,6 +867,10 @@ Bool DemoExecute()
 
     size = Frame_GetSize(frame);
 
+
+
+
+    FrameSize = size;
 
 
 
