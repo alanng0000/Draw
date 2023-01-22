@@ -21,3 +21,10 @@ struct Font
 
     Gdiplus::Font* Internal;
 };
+
+
+
+
+
+
+Font* Draw_Font_Pointer(Object o);
