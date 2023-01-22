@@ -503,31 +503,10 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
+
     Gdiplus::Image* mm;
 
     mm = Draw_Image_GetInternal(image);
-
-
-
-    
-    int destL;
-
-    destL = (int)destLeft;
-
-
-    int destU;
-
-    destU = (int)destUp;
-
-
-    int destW;
-
-    destW = (int)destWidth;
-
-
-    int destH;
-
-    destH = (int)destHeight;
 
 
 
@@ -535,7 +514,8 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
     Gdiplus::Rect destRect;
 
-    destRect = Gdiplus::Rect(destL, destU, destW, destH);
+    
+    Draw_Draw_CreateRect(&destRect, destLeft, destUp, destWidth, destHeight);
 
 
 
@@ -684,6 +664,7 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
 
 
 
+
 Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height)
 {
     Draw* m;
@@ -692,14 +673,19 @@ Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height)
 
 
 
-    int leftU;
-
-    
-
-
-
 
     Gdiplus::Rect rect;
+
+
+    Draw_Draw_CreateRect(&rect, left, up, width, height);
+
+
+
+    m->Graphic->SetClip(rect);
+
+
+
+    return true;
 }
 
 
