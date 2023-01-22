@@ -67,6 +67,95 @@ Bool Draw_Font_Final(Object o)
 
 
 
+Object Draw_Font_GetFamily(Object o)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+    return m->Family;
+}
+
+
+
+
+
+Bool Draw_Font_SetFamily(Object o, Object value)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+    m->Family = value;
+
+
+    return true;
+}
+
+
+
+
+
+
+Int Draw_Font_GetSize(Object o)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+    return m->Size;
+}
+
+
+
+
+
+Bool Draw_Font_SetSize(Object o, Int value)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+    m->Size = value;
+
+
+    return true;
+}
+
+
+
+
+
+Int Draw_Font_GetStyle(Object o)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+    return m->Style;
+}
+
+
+
+
+
+Bool Draw_Font_SetStyle(Object o, Int value)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+    m->Style = value;
+
+
+    return true;
+}
 
 
 
