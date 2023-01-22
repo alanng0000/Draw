@@ -443,7 +443,7 @@ Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int h
 
     Gdiplus::Brush* oc;
 
-    oc = (Gdiplus::Brush*)brush;
+    oc = Draw_Brush_GetInternal(brush);
 
 
 
