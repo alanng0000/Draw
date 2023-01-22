@@ -42,6 +42,10 @@ Gdiplus::Font* Draw_Font_GetInternal(Object o);
 
 
 
+Gdiplus::Brush* Draw_Brush_GetInternal(Object o);
+
+
+
 
 
 

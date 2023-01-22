@@ -4,7 +4,7 @@
 
 
 
-Object Draw_ColorBrush_New()
+Int Draw_ColorBrush_Create()
 {
     Gdiplus::Color color;
 
@@ -17,7 +17,7 @@ Object Draw_ColorBrush_New()
 
 
 
-    Object u;
+    Int u;
 
     u = CastInt(o);
 
@@ -28,46 +28,20 @@ Object Draw_ColorBrush_New()
 
 
 
-Bool Draw_ColorBrush_Delete(Object o)
-{
-    void* p;
-
-    p = CastPointer(o);
-
-
-    delete p;
-
-
-    return true;
-}
-
-
-
-
-
-
-Bool Draw_ColorBrush_Init(Object o)
-{
-    return true;
-}
-
-
-
-
-
-Bool Draw_ColorBrush_Final(Object o)
-{
-    return true;
-}
-
-
 
 
 Int Draw_ColorBrush_GetColor(Object o)
 {
+    Gdiplus::Brush* a;
+
+    a = Draw_Brush_GetInternal(o);
+
+
+
+
     Gdiplus::SolidBrush* m;
 
-    m = (Gdiplus::SolidBrush*)o;
+    m = (Gdiplus::SolidBrush*)a;
 
 
 
@@ -92,9 +66,16 @@ Int Draw_ColorBrush_GetColor(Object o)
 
 Bool Draw_ColorBrush_SetColor(Object o, Int value)
 {
+    Gdiplus::Brush* a;
+
+    a = Draw_Brush_GetInternal(o);
+
+
+
+
     Gdiplus::SolidBrush* m;
 
-    m = (Gdiplus::SolidBrush*)o;
+    m = (Gdiplus::SolidBrush*)a;
 
 
 

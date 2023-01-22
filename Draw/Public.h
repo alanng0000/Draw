@@ -93,9 +93,8 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, Int rectLeft,
 
 
 
-
-ObjectApi(Draw, ColorBrush)
-
+Draw_Api
+Int Draw_ColorBrush_Create();
 
 
 
