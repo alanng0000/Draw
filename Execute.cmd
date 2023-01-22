@@ -1,4 +1,4 @@
 @echo off
 
 
-..\Out\Draw.Exe.dll.exe
+..\..\Out\Draw.Exe.dll.exe
