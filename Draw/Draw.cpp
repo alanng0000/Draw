@@ -564,7 +564,66 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
-Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, Int rectLeft, Int rectUp, Int rectWidth, Int rectHeight, Object brush)
+Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft, SInt rectUp, Int rectWidth, Int rectHeight, Object brush)
 {
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+
+
+    WCHAR* stringU;
+
+    stringU = (WChar*)string;
+
+
+
+    int lengthU;
+
+    lengthU = (int)length;
+
+
+
+    Gdiplus::Font* fontU;
+
+    fontU = Draw_Font_GetInternal(font);
+
+
+
+
+
+    Gdiplus::REAL rectLeftU;
+
+    rectLeftU = (Gdiplus::REAL)rectLeft;
+
+
+
+    Gdiplus::REAL rectUpU;
+
+    rectUpU = (Gdiplus::REAL)rectUp;
+
+
+
+    Gdiplus::REAL rectWidthU;
+
+    rectWidthU = (Gdiplus::REAL)rectWidth;
+
+
+
+    Gdiplus::REAL rectHeightU;
+
+    rectHeightU = (Gdiplus::REAL)rectHeight;
+
+
+
+
+
+    Gdiplus::RectF rectF;
+
+    rectF = Gdiplus::RectF(rectLeftU, rectUpU, rectWidthU, rectHeightU);
+
+
+
     return true;
 }
