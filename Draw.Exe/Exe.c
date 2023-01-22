@@ -575,7 +575,7 @@ Bool DrawExecute(Object draw)
 
 
 
-    Draw_Draw_Rect(draw, Brush, left, up, width, height);
+    Draw_Draw_Rect(draw, left, up, width, height, Brush);
 
 
 
