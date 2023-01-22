@@ -25,6 +25,8 @@ struct Constant
 
     Int FontStyleUnderline;
 
+
+    Gdiplus::StringFormat* StringFormat;
 };
 
 

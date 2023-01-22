@@ -72,6 +72,32 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+    m->StringFormat = new Gdiplus::StringFormat();
+
+
+
+    int flag;
+
+    flag = 0;
+
+
+    flag = flag | Gdiplus::StringFormatFlagsNoWrap | Gdiplus::StringFormatFlagsNoFitBlackBox;
+
+
+
+    m->StringFormat->SetFormatFlags(flag);
+
+
+
+    m->StringFormat->SetAlignment(Gdiplus::StringAlignmentNear);
+
+
+
+    m->StringFormat->SetLineAlignment(Gdiplus::StringAlignmentNear);
+
+
+
+
     return true;
 }
 
