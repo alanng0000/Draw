@@ -56,9 +56,9 @@ Bool Draw_Font_Init(Object o)
 
 
 
-    REAL size;
+    Gdiplus::REAL size;
 
-    size = m->Size;
+    size = (Gdiplus::REAL)m->Size;
 
 
 
