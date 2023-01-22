@@ -48,6 +48,31 @@ Bool Draw_Font_Init(Object o)
     m = Draw_Font_Pointer(o);
 
 
+
+
+    Gdiplus::FontFamily* family;
+
+    family = Draw_FontFamily_GetInternal(m->Family);
+
+
+
+    REAL size;
+
+    size = m->Size;
+
+
+
+    int style;
+
+    style = (int)m->Style;
+
+
+
+
+    m->Internal = new Gdiplus::Font(family, size, style, Gdiplus::UnitPixel);
+
+
+
     return true;
 }
 
@@ -57,6 +82,16 @@ Bool Draw_Font_Init(Object o)
 
 Bool Draw_Font_Final(Object o)
 {
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+
+    delete m->Internal;
+
+
+
     return true;
 }
 
