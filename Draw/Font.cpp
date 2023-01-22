@@ -197,6 +197,23 @@ Bool Draw_Font_SetStyle(Object o, Int value)
 
 
 
+Gdiplus::Font* Draw_Font_GetInternal(Object o)
+{
+    Font* m;
+
+    m = Draw_Font_Pointer(o);
+
+
+
+    return m->Internal;
+}
+
+
+
+
+
+
+
 Font* Draw_Font_Pointer(Object o)
 {
     Font* m;

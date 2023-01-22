@@ -38,6 +38,9 @@ Gdiplus::FontFamily* Draw_FontFamily_GetInternal(Object o);
 
 
 
+Gdiplus::Font* Draw_Font_GetInternal(Object o);
+
+
 
 
 
