@@ -1057,6 +1057,15 @@ Bool DemoExecute()
 
 
 
+    Data_Final(Data);
+
+
+
+    Data_Delete(Data);
+
+
+
+
 
     Draw_Brush_Final(Brush);
 
