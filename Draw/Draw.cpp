@@ -575,7 +575,7 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
 
     WCHAR* stringU;
 
-    stringU = (WChar*)string;
+    stringU = (WCHAR*)string;
 
 
 
