@@ -122,6 +122,14 @@ Bool Draw_Draw_Init(Object o)
 
 
 
+
+
+
+    m->Graphic->SetTextRenderingHint(Gdiplus::TextRenderingHintClearTypeGridFit);
+    
+
+
+
     return true;
 }
 
@@ -622,6 +630,13 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
     Gdiplus::RectF rectF;
 
     rectF = Gdiplus::RectF(rectLeftU, rectUpU, rectWidthU, rectHeightU);
+
+
+
+
+    Gdiplus::Brush* brushU;
+
+    brushU = Draw_Brush_GetInternal(brush);
 
 
 
