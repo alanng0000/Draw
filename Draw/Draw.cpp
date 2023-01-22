@@ -595,6 +595,7 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
 
 
 
+
     Gdiplus::Font* fontU;
 
     fontU = Draw_Font_GetInternal(font);
@@ -639,6 +640,40 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
     Gdiplus::Brush* brushU;
 
     brushU = Draw_Brush_GetInternal(brush);
+
+
+
+
+    Object global;
+
+    global = Draw_Global();
+
+
+
+    Object constant;
+
+    constant = Draw_Global_Constant(global);
+
+
+
+    Int stringFormat;
+
+    stringFormat = Draw_Constant_StringFormat(constant);
+
+
+
+
+    Gdiplus::StringFormat* stringFormatU;
+
+
+    stringFormatU = (Gdiplus::StringFormat*)stringFormat;
+
+
+
+
+
+    m->Graphic->DrawString(stringU, lengthU, fontU, rectF, stringFormatU, brushU);
+
 
 
 
