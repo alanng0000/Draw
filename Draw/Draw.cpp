@@ -432,7 +432,7 @@ Bool Draw_Draw_Clear(Object o, Int color)
 
 
 
-Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int height)
+Bool Draw_Draw_Rect(Object o, SInt left, SInt up, Int width, Int height, Object brush)
 {
     Draw* m;
 
