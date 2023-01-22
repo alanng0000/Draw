@@ -38,6 +38,38 @@ Bool Draw_Brush_Delete(Object o)
 
 
 
+
+
+Bool Draw_Brush_Init(Object o)
+{
+    return true;
+}
+
+
+
+
+
+Bool Draw_Brush_Final(Object o)
+{
+    Brush* m;
+
+    m = Draw_Brush_Pointer(o);
+
+
+
+    delete m->Internal;
+
+
+
+    return true;
+}
+
+
+
+
+
+
+
 Gdiplus::Brush* Draw_Brush_GetInternal(Object o)
 {
     Brush* m;

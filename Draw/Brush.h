@@ -11,6 +11,9 @@
 
 struct Brush
 {
+    Int Type;
+
+
     Gdiplus::Brush* Internal;
 };
 
