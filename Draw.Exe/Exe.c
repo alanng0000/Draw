@@ -1057,11 +1057,23 @@ Bool DemoExecute()
 
 
 
+    Int bufferU;
+
+    bufferU = Data_GetValue(Data);
+
+
+
+
     Data_Final(Data);
 
 
 
     Data_Delete(Data);
+
+
+
+
+    Delete(bufferU);
 
 
 
