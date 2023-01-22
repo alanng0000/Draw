@@ -641,7 +641,7 @@ Bool DrawExecute(Object draw)
 
 
 
-    color = 0xff00ff00;
+    color = 0x8000ff00;
 
 
 
