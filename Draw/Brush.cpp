@@ -70,6 +70,73 @@ Bool Draw_Brush_Final(Object o)
 
 
 
+
+Int Draw_Brush_GetType(Object o)
+{
+    Brush* m;
+
+    m = Draw_Brush_Pointer(o);
+
+
+    return m->Type;
+}
+
+
+
+
+
+Bool Draw_Brush_SetType(Object o, Int value)
+{
+    Brush* m;
+
+    m = Draw_Brush_Pointer(o);
+
+
+    m->Type = value;
+
+
+    return true;
+}
+
+
+
+
+
+
+
+Int Draw_Brush_GetValue(Object o)
+{
+    Brush* m;
+
+    m = Draw_Brush_Pointer(o);
+
+
+    return m->Value;
+}
+
+
+
+
+
+Bool Draw_Brush_SetValue(Object o, Int value)
+{
+    Brush* m;
+
+    m = Draw_Brush_Pointer(o);
+
+
+    m->Value = value;
+
+
+    return true;
+}
+
+
+
+
+
+
+
 Gdiplus::Brush* Draw_Brush_GetInternal(Object o)
 {
     Brush* m;
