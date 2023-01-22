@@ -1016,6 +1016,58 @@ Bool DemoExecute()
 
 
 
+
+    Draw_Font_Final(Font);
+
+
+
+    Draw_Font_Delete(Font);
+
+
+
+
+
+    Draw_FontFamily_Final(FontFamily);
+
+
+
+    Draw_FontFamily_Delete(FontFamily);
+
+
+
+
+
+    String_Final(fontName);
+
+
+
+    String_Delete(fontName);
+
+
+
+
+
+    Draw_Image_Final(Image);
+
+
+
+    Draw_Image_Delete(Image);
+
+
+
+
+
+
+    Draw_Brush_Final(Brush);
+
+
+
+    Draw_Brush_Delete(Brush);
+
+
+
+
+
     Draw_Draw_Final(Draw);
 
 
