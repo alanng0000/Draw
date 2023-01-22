@@ -111,7 +111,13 @@ Int Draw_Brush_GetValue(Object o)
     m = Draw_Brush_Pointer(o);
 
 
-    return m->Value;
+
+    Int u;
+
+    u = CastInt(m->Internal);
+
+
+    return u;
 }
 
 
@@ -125,7 +131,14 @@ Bool Draw_Brush_SetValue(Object o, Int value)
     m = Draw_Brush_Pointer(o);
 
 
-    m->Value = value;
+
+    Gdiplus::Brush* u;
+
+    u = (Gdiplus::Brush*)value;
+
+
+
+    m->Internal = u;
 
 
     return true;
