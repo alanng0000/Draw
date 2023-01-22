@@ -54,19 +54,19 @@ Bool Draw_Image_Init(Object o)
     bitmap = new Gdiplus::Bitmap(m->Stream);
 
 
-    m->Bitmap = bitmap;
+    m->Internal = bitmap;
 
 
 
 
     Int width;
 
-    width = m->Bitmap->GetWidth();
+    width = m->Internal->GetWidth();
 
 
     Int height;
 
-    height = m->Bitmap->GetHeight();
+    height = m->Internal->GetHeight();
 
 
 
@@ -106,7 +106,7 @@ Bool Draw_Image_Final(Object o)
 
 
 
-    delete m->Bitmap;
+    delete m->Internal;
 
 
 
@@ -184,14 +184,14 @@ Object Draw_Image_GetSize(Object o)
 
 
 
-Gdiplus::Bitmap* Draw_Image_GetBitmap(Object o)
+Gdiplus::Bitmap* Draw_Image_GetInternal(Object o)
 {
     Image* m;
 
     m = Draw_Image_Pointer(o);
 
 
-    return m->Bitmap;
+    return m->Internal;
 }
 
 

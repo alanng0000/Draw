@@ -18,7 +18,7 @@ struct Image
 {
     IStream* Stream;
 
-    Gdiplus::Bitmap* Bitmap;
+    Gdiplus::Bitmap* Internal;
     
     Object Size;
 };

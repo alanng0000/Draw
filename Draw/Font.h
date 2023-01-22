@@ -17,4 +17,7 @@ struct Font
 
 
     Int Style;
+
+
+    Gdiplus::Font* Internal;
 };
