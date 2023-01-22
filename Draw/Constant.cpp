@@ -78,10 +78,12 @@ Bool Draw_Constant_Init(Object o)
 
     int flag;
 
+
     flag = 0;
 
 
     flag = flag | Gdiplus::StringFormatFlagsNoWrap | Gdiplus::StringFormatFlagsNoFitBlackBox;
+
 
 
 
@@ -98,6 +100,10 @@ Bool Draw_Constant_Init(Object o)
 
 
     m->StringFormat->SetHotkeyPrefix(Gdipus::HotkeyPrefixNone);
+
+
+
+    m->StringFormat->SetTrimming(Gdiplus::StringTrimmingNone);
 
 
 
