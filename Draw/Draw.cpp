@@ -124,9 +124,11 @@ Bool Draw_Draw_Init(Object o)
 
 
 
+    m->Graphic->SetPageUnit(Gdiplus::UnitPixel);
+
 
     m->Graphic->SetTextRenderingHint(Gdiplus::TextRenderingHintClearTypeGridFit);
-    
+
 
 
 
