@@ -93,6 +93,13 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
 
 
 
+Draw_Api
+Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height);
+
+
+
+
+
 ObjectApi(Draw, Brush)
 
 

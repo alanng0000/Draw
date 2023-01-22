@@ -679,3 +679,62 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, SInt rectLeft
 
     return true;
 }
+
+
+
+
+
+Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height)
+{
+    Draw* m;
+
+    m = Draw_Draw_Pointer(o);
+
+
+
+    int leftU;
+
+    
+
+
+
+
+    Gdiplus::Rect rect;
+}
+
+
+
+
+
+
+Bool Draw_Draw_CreateRect(Gdiplus::Rect* result, SInt left, SInt up, Int width, Int height)
+{
+    int l;
+
+    l = (int)left;
+
+
+    int u;
+
+    u = (int)up;
+
+
+    int w;
+
+    w = (int)width;
+
+
+    int h;
+
+    h = (int)height;
+
+
+
+
+
+    *result = Gdiplus::Rect(l, u, w, h);
+
+
+
+    return true;
+}
