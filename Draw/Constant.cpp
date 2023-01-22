@@ -100,7 +100,7 @@ Bool Draw_Constant_Init(Object o)
 
 
 
-    m->StringFormat->SetHotkeyPrefix(Gdipus::HotkeyPrefixNone);
+    m->StringFormat->SetHotkeyPrefix(Gdiplus::HotkeyPrefixNone);
 
 
 
@@ -124,7 +124,7 @@ Bool Draw_Constant_Final(Object o)
 
 
     delete m->StringFormat;
-    
+
 
 
     return true;
