@@ -495,7 +495,7 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
     Gdiplus::Image* mm;
 
-    mm = Draw_Image_GetBitmap(image);
+    mm = Draw_Image_GetInternal(image);
 
 
 
