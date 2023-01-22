@@ -753,11 +753,46 @@ Bool DemoExecute()
 
 
 
-    Brush = Draw_ColorBrush_New();
+    Brush = Draw_Brush_New();
 
 
 
-    Draw_ColorBrush_Init(Brush);
+    Draw_Brush_Init(Brush);
+
+
+
+
+    Int brushU;
+
+    brushU = Draw_ColorBrush_Create();
+
+
+
+    Object global;
+
+
+    global = Draw_Global();
+
+
+
+    Object constant;
+
+    constant = Draw_Global_Constant(global);
+
+
+
+    Int typeU;
+
+    typeU = Draw_Constant_ColorBrushType(constant);
+
+
+
+
+    Draw_Brush_SetType(Brush, typeU);
+
+
+
+    Draw_Brush_SetValue(Brush, brushU);
 
 
 
