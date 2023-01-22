@@ -583,7 +583,7 @@ Bool DrawExecute(Object draw)
 
 
 
-    Draw_Draw_Clip(draw, ClipLeft, ClipLeft, clipWidth, clipHeight);
+    Draw_Draw_Clip(draw, ClipLeft, ClipUp, clipWidth, clipHeight);
 
 
 
