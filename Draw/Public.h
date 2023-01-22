@@ -72,7 +72,7 @@ Bool Draw_Draw_Clear(Object o, Int color);
 
 
 Draw_Api
-Bool Draw_Draw_Rect(Object o, Object brush, SInt left, SInt up, Int width, Int height);
+Bool Draw_Draw_Rect(Object o, SInt left, SInt up, Int width, Int height, Object brush);
 
 
 
@@ -82,6 +82,12 @@ Draw_Api
 Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int destWidth, Int destHeight,
     SInt sourceLeft, SInt sourceUp, Int sourceWidth, Int sourceHeight);
     
+
+
+
+
+Draw_Api
+Bool Draw_Draw_Text(Object o, Int string, Int length, Object font, Int rectLeft, Int rectUp, Int rectWidth, Int rectHeight, Object brush);
 
 
 
