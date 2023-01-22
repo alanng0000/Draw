@@ -76,6 +76,7 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+
     int flag;
 
 
@@ -116,6 +117,16 @@ Bool Draw_Constant_Init(Object o)
 
 Bool Draw_Constant_Final(Object o)
 {
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    delete m->StringFormat;
+    
+
+
     return true;
 }
 
@@ -212,6 +223,24 @@ Int Draw_Constant_FontStyleUnderline(Object o)
 
 
 
+
+
+Int Draw_Constant_StringFormat(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    Int u;
+
+    u = CastInt(m->StringFormat);
+
+
+
+    return u;
+}
 
 
 

@@ -267,6 +267,9 @@ Int Draw_Constant_FontStyleUnderline(Object o);
 
 
 
+Draw_Api
+Int Draw_Constant_StringFormat(Object o);
+
 
 
 
