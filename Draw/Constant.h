@@ -12,6 +12,11 @@ struct Constant
     Int DefaultColor;
 
 
+
+    Int ColorBrushType;
+
+
+
     Int FontStyleRegular;
 
     Int FontStyleBold;

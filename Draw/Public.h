@@ -242,6 +242,12 @@ Int Draw_Constant_DefaultColor(Object o);
 
 
 Draw_Api
+Int Draw_Constant_ColorBrushType(Object o);
+
+
+
+
+Draw_Api
 Int Draw_Constant_FontStyleRegular(Object o);
 
 

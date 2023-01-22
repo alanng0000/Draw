@@ -53,6 +53,11 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+
+    m->ColorBrushType = 1;
+
+
+
     m->FontStyleRegular = Gdiplus::FontStyleRegular;
 
 
@@ -95,6 +100,20 @@ Int Draw_Constant_DefaultColor(Object o)
     return m->DefaultColor;
 }
 
+
+
+
+
+Int Draw_Constant_ColorBrushType(Object o)
+{
+    Constant* m;
+
+    m = Draw_Constant_Pointer(o);
+
+
+
+    return m->ColorBrushType;
+}
 
 
 
