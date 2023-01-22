@@ -24,12 +24,25 @@ IStream* Stream;
 
 
 
+Object FontFamily;
+
+
+
+Object Font;
+
+
+
+
+
 Byte Comp;
 
 
 
 
+Int Text;
 
+
+Int TextLength;
 
 
 
@@ -583,7 +596,21 @@ Bool DrawExecute(Object draw)
 
     Draw_Draw_Image(draw, Image, 400, 400, 800, 400, 600, 600, 800, 400);
 
+
+
+
+
+    color = 0xff00ff00;
+
+
+
+    Draw_ColorBrush_SetColor(Brush, color);
     
+
+
+    Draw_Draw_Text(draw, Text, TextLength, Font, 600, 1000, 400, 200, Brush);
+
+
 
 
     return true;
@@ -826,6 +853,90 @@ Bool DemoExecute()
     Draw_Image_Init(Image);
 
 
+
+
+
+
+
+
+    Int oss;
+
+    oss = CastInt("Segoe UI Variable Display");
+
+
+    Int ossLength;
+
+    ossLength = String_ConstantLength(oss);
+
+
+
+
+    Object fontName;
+
+
+    fontName = String_New();
+
+
+    String_Init(fontName);
+
+
+    String_SetLength(fontName, ossLength);
+
+
+    String_SetData(fontName, oss);
+
+
+
+
+
+    FontFamily = Draw_FontFamily_New();
+
+
+    Draw_FontFamily_SetName(FontFamily, fontName);
+
+
+    Draw_FontFamily_Init(FontFamily);
+
+
+
+
+    Int fontStyle;
+
+    fontStyle = Draw_Constant_FontStyleBold(constant);
+
+
+
+
+    Font = Draw_Font_New();
+
+
+    Draw_Font_SetFamily(Font, FontFamily);
+
+
+    Draw_Font_SetSize(Font, 30);
+
+
+    Draw_Font_SetStyle(Font, fontStyle);
+
+
+
+    Draw_Font_Init(Font);
+
+
+
+
+
+    TextLength = 14;
+
+
+
+    WCHAR* wos;
+
+    wos = L"DEMO Draw Text";
+
+
+
+    Text = CastInt(wos);
 
 
 
