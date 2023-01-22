@@ -97,6 +97,9 @@ Bool Draw_Constant_Init(Object o)
 
 
 
+    m->StringFormat->SetHotkeyPrefix(Gdipus::HotkeyPrefixNone);
+
+
 
     return true;
 }
