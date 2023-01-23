@@ -87,7 +87,7 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 Draw_Api
-Bool Draw_Draw_Text(Object o, Int string, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush);
+Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush);
 
 
 

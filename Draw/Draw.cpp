@@ -554,7 +554,7 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
-Bool Draw_Draw_Text(Object o, Int string, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush)
+Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush)
 {
     Draw* m;
 
@@ -565,7 +565,7 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, SInt destLeft, SInt destUp
 
     WCHAR* stringU;
 
-    stringU = (WCHAR*)string;
+    stringU = (WCHAR*)text;
 
 
 
