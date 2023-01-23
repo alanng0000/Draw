@@ -1088,10 +1088,6 @@ Bool DemoExecute()
 
 
 
-    Frame_SetVisible(frame, true);
-
-
-
 
     Frame_Execute(frame);
 
