@@ -649,7 +649,7 @@ Bool DrawExecute(Object draw)
     
 
 
-    Draw_Draw_Text(draw, Text, TextLength, Font, Left + 600, Up + 850, 400, 200, Brush);
+    Draw_Draw_Text(draw, Text, TextLength, Left + 600, Up + 850, 400, 200, Font, Brush);
 
 
 
