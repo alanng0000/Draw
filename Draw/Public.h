@@ -79,16 +79,16 @@ Bool Draw_Draw_Rect(Object o, SInt left, SInt up, Int width, Int height, Object 
 
 
 Draw_Api
-Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int destWidth, Int destHeight,
-    SInt sourceLeft, SInt sourceUp, Int sourceWidth, Int sourceHeight);
-    
+Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush);
+
 
 
 
 
 Draw_Api
-Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush);
-
+Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int destWidth, Int destHeight,
+    SInt sourceLeft, SInt sourceUp, Int sourceWidth, Int sourceHeight);
+    
 
 
 
