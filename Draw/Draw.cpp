@@ -584,35 +584,35 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, SInt destLeft, SInt destUp
 
 
 
-    Gdiplus::REAL rectLeftU;
+    Gdiplus::REAL destLeftU;
 
-    rectLeftU = (Gdiplus::REAL)rectLeft;
-
-
-
-    Gdiplus::REAL rectUpU;
-
-    rectUpU = (Gdiplus::REAL)rectUp;
+    destLeftU = (Gdiplus::REAL)destLeft;
 
 
 
-    Gdiplus::REAL rectWidthU;
+    Gdiplus::REAL destUpU;
 
-    rectWidthU = (Gdiplus::REAL)rectWidth;
-
-
-
-    Gdiplus::REAL rectHeightU;
-
-    rectHeightU = (Gdiplus::REAL)rectHeight;
+    destUpU = (Gdiplus::REAL)destUp;
 
 
 
+    Gdiplus::REAL destWidthU;
+
+    destWidthU = (Gdiplus::REAL)destWidth;
 
 
-    Gdiplus::RectF rectF;
 
-    rectF = Gdiplus::RectF(rectLeftU, rectUpU, rectWidthU, rectHeightU);
+    Gdiplus::REAL destHeightU;
+
+    destHeightU = (Gdiplus::REAL)destHeight;
+
+
+
+
+
+    Gdiplus::RectF destRectF;
+
+    destRectF = Gdiplus::RectF(destLeftU, destUpU, destWidthU, destHeightU);
 
 
 
@@ -652,7 +652,7 @@ Bool Draw_Draw_Text(Object o, Int string, Int length, SInt destLeft, SInt destUp
 
 
 
-    m->Graphic->DrawString(stringU, lengthU, fontU, rectF, stringFormatU, brushU);
+    m->Graphic->DrawString(stringU, lengthU, fontU, destRectF, stringFormatU, brushU);
 
 
 
