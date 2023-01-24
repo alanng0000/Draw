@@ -159,14 +159,12 @@ ObjectApi(Draw, Image)
 
 
 Draw_Api
-Int Draw_Image_GetStream(Object o);
-
+Int Draw_Image_GetData(Object o);
 
 
 
 Draw_Api
-Bool Draw_Image_SetStream(Object o, Int value);
-
+Bool Draw_Image_SetData(Object o, Int value);
 
 
 
@@ -174,6 +172,10 @@ Bool Draw_Image_SetStream(Object o, Int value);
 Draw_Api
 Object Draw_Image_GetSize(Object o);
 
+
+
+Draw_Api
+Bool Draw_Image_SetSize(Object o, Object value);
 
 
 
