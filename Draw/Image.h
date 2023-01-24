@@ -9,11 +9,6 @@
 
 
 
-
-
-
-
-
 struct Image
 {
     Object Data;
@@ -24,6 +19,7 @@ struct Image
 
     Gdiplus::Bitmap* Internal;    
 };
+
 
 
 
