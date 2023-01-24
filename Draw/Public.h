@@ -174,10 +174,6 @@ Object Draw_Image_GetSize(Object o);
 
 
 
-Draw_Api
-Bool Draw_Image_SetSize(Object o, Object value);
-
-
 
 
 
