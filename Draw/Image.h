@@ -16,11 +16,13 @@
 
 struct Image
 {
-    IStream* Stream;
+    Object Data;
 
-    Gdiplus::Bitmap* Internal;
-    
+
     Object Size;
+
+
+    Gdiplus::Bitmap* Internal;    
 };
 
 
