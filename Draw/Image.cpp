@@ -182,7 +182,11 @@ Bool Draw_Image_Final(Object o)
 
 
 
-    delete m->Size;
+    Size_Final(m->Size);
+
+
+    Size_Delete(m->Size);
+    
 
 
 
