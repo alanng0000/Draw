@@ -1015,7 +1015,7 @@ Bool DemoExecute()
 
 
 
-    WCHAR* wos;
+    void* wos;
 
     wos = L"DEMO Draw Text";
 
