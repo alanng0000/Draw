@@ -15,11 +15,11 @@ Object Image;
 
 
 
-Object Data;
+Object ImageData;
 
 
 
-IStream* Stream;
+Object ImageSize;
 
 
 
@@ -92,42 +92,6 @@ Bool StorageStringSet(Object string, Int charArray)
     return true;
 }
 
-
-
-
-
-Bool StreamExecute()
-{
-    Int o;
-
-    o = Data_GetValue(Data);
-
-
-
-    Int size;
-
-    size = Data_GetSize(Data);
-
-
-
-    Int32 sizeU;
-
-    sizeU = (Int32)size;
-
-
-
-    void* p;
-
-    p = CastPointer(o);
-
-
-
-
-    Stream = SHCreateMemStream(p, sizeU);
-
-
-    return true;
-}
 
 
 
@@ -959,8 +923,6 @@ Bool DemoExecute()
 
 
 
-    StreamExecute();
-
 
 
 
@@ -968,14 +930,11 @@ Bool DemoExecute()
 
 
 
-
-    Int streamU;
-
-    streamU = CastInt(Stream);
+    Draw_Image_SetSize(Image, ImageSize);
 
 
 
-    Draw_Image_SetStream(Image, streamU);
+    Draw_Image_SetData(Image, ImageData);
 
 
 
@@ -1137,23 +1096,30 @@ Bool DemoExecute()
 
 
 
-    Int bufferU;
-
-    bufferU = Data_GetValue(Data);
 
 
-
-
-    Data_Final(Data);
+    Data_Final(ImageData);
 
 
 
-    Data_Delete(Data);
+    Data_Delete(ImageData);
 
 
 
 
-    Delete(bufferU);
+    Delete(imageDataBuffer);
+
+
+
+
+
+    Size_Final(ImageSize);
+
+
+
+    Size_Delete(ImageSize);
+
+
 
 
 
