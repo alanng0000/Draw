@@ -504,9 +504,15 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
+    Gdiplus::Bitmap* uu;
+
+    uu = Draw_Image_GetInternal(image);
+
+
+
     Gdiplus::Image* mm;
 
-    mm = Draw_Image_GetInternal(image);
+    mm = uu;
 
 
 
