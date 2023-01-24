@@ -125,7 +125,7 @@ Bool Draw_Image_Final(Object o)
 
 
 
-Int Draw_Image_GetStream(Object o)
+Object Draw_Image_GetData(Object o)
 {
     Image* m;
 
@@ -133,19 +133,14 @@ Int Draw_Image_GetStream(Object o)
 
 
 
-    Int u;
-
-    u = CastInt(m->Stream);
-
-
-    return u;
+    return m->Data;
 }
 
 
 
 
 
-Bool Draw_Image_SetStream(Object o, Int value)
+Bool Draw_Image_SetData(Object o, Object value)
 {
     Image* m;
 
@@ -153,12 +148,7 @@ Bool Draw_Image_SetStream(Object o, Int value)
 
 
 
-    IStream* u;
-
-    u = (IStream*)value;
-
-
-    m->Stream = u;
+    m->Data = value;
 
 
     return true;
@@ -177,6 +167,22 @@ Object Draw_Image_GetSize(Object o)
 
 
     return m->Size;
+}
+
+
+
+
+Bool Draw_Image_SetSize(Object o, Object value)
+{
+    Image* m;
+
+    m = Draw_Image_Pointer(o);
+
+
+    m->Size = value;
+
+
+    return true;
 }
 
 
