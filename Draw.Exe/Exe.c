@@ -1104,17 +1104,7 @@ Bool DemoExecute()
 
 
 
-    Delete(imageDataBuffer);
-
-
-
-
-
-    Size_Final(ImageSize);
-
-
-
-    Size_Delete(ImageSize);
+    Delete(buffer);
 
 
 
