@@ -89,7 +89,7 @@ Bool Draw_Image_Init(Object o)
 
     Int pixelData;
 
-    pixelData = uu + Constant_IntByteCount * 2
+    pixelData = uu + Constant_IntByteCount * 2;
 
 
 
