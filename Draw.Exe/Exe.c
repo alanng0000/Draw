@@ -19,9 +19,6 @@ Object ImageData;
 
 
 
-Object ImageSize;
-
-
 
 
 Object FontFamily;
@@ -892,7 +889,7 @@ Bool DemoExecute()
 
 
     Data_SetValue(data, buffer);
-    
+
 
 
 
@@ -923,6 +920,7 @@ Bool DemoExecute()
 
 
 
+
     ImageData = data;
 
 
@@ -930,10 +928,6 @@ Bool DemoExecute()
 
 
     Image = Draw_Image_New();
-
-
-
-    Draw_Image_SetSize(Image, ImageSize);
 
 
 
