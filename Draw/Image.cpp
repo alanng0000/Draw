@@ -144,6 +144,28 @@ Bool Draw_Image_Init(Object o)
 
 
 
+
+    Object size;
+
+
+    size = Size_New();
+
+
+    Size_Init(size);
+
+
+    Size_SetWidth(size, width);
+
+
+    Size_SetHeight(size, height);
+
+
+
+    m->Size = size;
+
+
+
+
     return true;
 }
 
@@ -159,7 +181,12 @@ Bool Draw_Image_Final(Object o)
 
 
 
-    delete m->Internal;
+
+    delete m->Size;
+
+
+
+    delete m->Intern;
 
 
 
@@ -218,32 +245,17 @@ Object Draw_Image_GetSize(Object o)
 
 
 
-Bool Draw_Image_SetSize(Object o, Object value)
+
+
+
+Gdiplus::Bitmap* Draw_Image_GetIntern(Object o)
 {
     Image* m;
 
     m = Draw_Image_Pointer(o);
 
 
-    m->Size = value;
-
-
-    return true;
-}
-
-
-
-
-
-
-Gdiplus::Bitmap* Draw_Image_GetInternal(Object o)
-{
-    Image* m;
-
-    m = Draw_Image_Pointer(o);
-
-
-    return m->Internal;
+    return m->Intern;
 }
 
 
