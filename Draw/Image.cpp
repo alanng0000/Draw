@@ -50,26 +50,54 @@ Bool Draw_Image_Init(Object o)
 
 
 
-    Object size;
 
-    size = m->Size;
+    Object data;
+
+    data = m->Data;
+
+
+
+
+    Int uu;
+
+
+    uu = Data_GetValue(data);
+
+
+
+
+    Int* oo;
+
+
+    oo = (Int*)uu;
+
 
 
 
     Int width;
 
-    width = Size_GetWidth(size);
+    width = oo[0];
+
 
 
     Int height;
 
-    height = Size_GetHeight(size);
+    height = oo[1];
+
+
+
+
+    Int pixelData;
+
+    pixelData = uu + Constant_IntByteCount * 2
+
 
 
 
     Int stride;
 
     stride = 4 * width;
+
 
 
 
@@ -91,27 +119,10 @@ Bool Draw_Image_Init(Object o)
 
 
 
-    Object data;
-
-    data = m->Data;
-
-
-
-
-    Int uu;
-
-
-    uu = Data_GetValue(data);
-
-
-    uu = uu + Constant_IntByteCount * 2
-
-
-
 
     Byte* scan0;
 
-    scan0 = (Byte*)uu;
+    scan0 = (Byte*)pixelData;
 
 
 
@@ -128,7 +139,7 @@ Bool Draw_Image_Init(Object o)
     bitmap = new Gdiplus::Bitmap(w, h, st, format, scan0);
 
 
-    m->Internal = bitmap;
+    m->Intern = bitmap;
 
 
 

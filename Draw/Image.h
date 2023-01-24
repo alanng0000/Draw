@@ -18,7 +18,7 @@ struct Image
 
 
 
-    Gdiplus::Bitmap* Internal;    
+    Gdiplus::Bitmap* Intern;    
 };
 
 
