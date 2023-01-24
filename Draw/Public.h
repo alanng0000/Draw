@@ -159,12 +159,12 @@ ObjectApi(Draw, Image)
 
 
 Draw_Api
-Int Draw_Image_GetData(Object o);
+Object Draw_Image_GetData(Object o);
 
 
 
 Draw_Api
-Bool Draw_Image_SetData(Object o, Int value);
+Bool Draw_Image_SetData(Object o, Object value);
 
 
 
