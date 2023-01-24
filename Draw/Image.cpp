@@ -49,6 +49,59 @@ Bool Draw_Image_Init(Object o)
 
 
 
+    Object size;
+
+    size = m->Size;
+
+
+
+    Int width;
+
+    width = Size_GetWidth(size);
+
+
+    Int height;
+
+    height = Size_GetHeight(size);
+
+
+
+    Int stride;
+
+    stride = 4 * width;
+
+
+
+    int w;
+
+    w = (int)width;
+
+
+    int h;
+
+    h = (int)height;
+
+
+
+    int st;
+
+    st = (int)stride;
+
+
+
+    Object data;
+
+    data = m->Data;
+
+
+
+    Gdiplus::PixelFormat format;
+
+    format = Gdiplus::PixelFormat32bppARGB;
+
+
+
+
     Gdiplus::Bitmap* bitmap;
 
     bitmap = new Gdiplus::Bitmap(m->Stream);
