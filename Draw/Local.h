@@ -30,7 +30,7 @@ extern Object Draw_Global_Data;
 
 
 
-Gdiplus::Bitmap* Draw_Image_GetInternal(Object o);
+Gdiplus::Bitmap* Draw_Image_GetIntern(Object o);
 
 
 
