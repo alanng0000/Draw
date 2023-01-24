@@ -97,9 +97,14 @@ Bool Draw_Image_Init(Object o)
 
 
 
+
     Int uu;
 
+
     uu = Data_GetValue(data);
+
+
+    uu = uu + Constant_IntByteCount * 2
 
 
 
