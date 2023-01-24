@@ -95,65 +95,29 @@ Bool StorageStringSet(Object string, Int charArray)
 
 
 
-
-
-
-Bool StorageExecute()
+Int StorageGetSize(Object storage)
 {
-    Int ca = CastInt("sun_and_cloud.jpg");
-
-
-
-
-
-    Object name = String_New();
-
-
-
-    String_Init(name);
-
-
-
-
-
-    StorageStringSet(name, ca);
-
-
-
-
-
-    Object storage = Storage_New();
-
-
-
-
-    Storage_Init(storage);
-
-
-
-
-
-    Storage_SetName(storage, name);
-
-
-
-
-
     Storage_Status(storage);
 
 
 
-    Int demoFileSize;
+    Int size;
     
 
-    demoFileSize = Storage_GetSize(storage);
+    size = Storage_GetSize(storage);
+
+
+
+    return size;
+}
 
 
 
 
 
+Bool StorageExecute(Object storage, Object data)
+{
     Storage_SetMode(storage, 0);
-
 
 
 
@@ -163,45 +127,8 @@ Bool StorageExecute()
 
 
 
-    Int size;
-    
-    size = demoFileSize;
-
-
-
-
-    Int o = New(size);
-
-
-
-    Int buffer = o;
-
-
-
-
-    Object data;
-
-
-    data = Data_New();
-
-
-
-    Data_Init(data);
-
-
-
-    Data_SetSize(data, size);
-
-
-    Data_SetValue(data, buffer);
-
-
-
-
 
     Storage_Read(storage, data);
-
-
 
     
 
@@ -209,35 +136,6 @@ Bool StorageExecute()
 
     Storage_Close(storage);
 
-
-
-
-
-
-
-    Storage_Final(storage);
-
-
-
-
-    Storage_Delete(storage);
-
-
-
-
-
-    String_Final(name);
-
-
-
-    String_Delete(name);
-
-
-
-
-
-
-    Data = data;
 
 
 
@@ -919,8 +817,113 @@ Bool DemoExecute()
 
 
 
-    StorageExecute();
 
+    Int ca = CastInt("image.img");
+
+
+
+
+
+    Object name = String_New();
+
+
+
+    String_Init(name);
+
+
+
+
+
+    StorageStringSet(name, ca);
+
+
+
+
+
+    Object storage = Storage_New();
+
+
+
+
+    Storage_Init(storage);
+
+
+
+
+    Storage_SetName(storage, name);
+
+
+
+
+    Int sizeSt;
+
+    sizeSt = StorageGetSize(storage);
+
+
+
+
+    Int o;
+    
+    o = New(sizeSt);
+
+
+
+    Int buffer;
+    
+    buffer = o;
+
+
+
+
+
+
+    Object data;
+
+
+    data = Data_New();
+
+
+
+    Data_Init(data);
+
+
+
+    Data_SetSize(data, sizeSt);
+
+
+    Data_SetValue(data, buffer);
+    
+
+
+
+
+    StorageExecute(storage, data);
+
+
+
+
+
+
+    Storage_Final(storage);
+
+
+
+
+    Storage_Delete(storage);
+
+
+
+
+
+    String_Final(name);
+
+
+
+    String_Delete(name);
+
+
+
+    ImageData = data;
 
 
 
