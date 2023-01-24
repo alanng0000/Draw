@@ -65,7 +65,14 @@ Bool Draw_Draw_SetMethod(Object o, Int value);
 
 
 Draw_Api
+Bool Draw_Draw_Result(Object o);
+
+
+
+
+Draw_Api
 Bool Draw_Draw_Clear(Object o, Int color);
+
 
 
 
