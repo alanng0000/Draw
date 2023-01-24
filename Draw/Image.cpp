@@ -113,7 +113,7 @@ Bool Draw_Image_Init(Object o)
 
     Gdiplus::PixelFormat format;
 
-    format = Gdiplus::PixelFormat32bppARGB;
+    format = PixelFormat32bppARGB;
 
 
 
