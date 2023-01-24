@@ -49,6 +49,7 @@ Bool Draw_Image_Init(Object o)
 
 
 
+
     Object size;
 
     size = m->Size;
@@ -89,9 +90,24 @@ Bool Draw_Image_Init(Object o)
 
 
 
+
     Object data;
 
     data = m->Data;
+
+
+
+    Int uu;
+
+    uu = Data_GetValue(data);
+
+
+
+
+    Byte* scan0;
+
+    scan0 = (Byte*)uu;
+
 
 
 
@@ -104,43 +120,11 @@ Bool Draw_Image_Init(Object o)
 
     Gdiplus::Bitmap* bitmap;
 
-    bitmap = new Gdiplus::Bitmap(m->Stream);
+    bitmap = new Gdiplus::Bitmap(w, h, st, format, scan0);
 
 
     m->Internal = bitmap;
 
-
-
-
-    Int width;
-
-    width = m->Internal->GetWidth();
-
-
-    Int height;
-
-    height = m->Internal->GetHeight();
-
-
-
-
-    Object size;
-
-
-    size = Size_New();
-
-
-    Size_Init(size);
-
-
-    Size_SetWidth(size, width);
-
-
-    Size_SetHeight(size, height);
-
-
-
-    m->Size = size;
 
 
 
@@ -160,13 +144,6 @@ Bool Draw_Image_Final(Object o)
 
 
     delete m->Internal;
-
-
-
-    Size_Final(m->Size);
-
-
-    Size_Delete(m->Size);
 
 
 
