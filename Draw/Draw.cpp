@@ -301,7 +301,17 @@ Bool Draw_Draw_Result(Object o)
 
 
 
+
+    m->Graphic->Flush(Gdiplus::FlushIntentionSync);
+
+
+
+
     m->HandleGraphic->DrawImage(m->Bitmap, 0, 0);
+
+
+
+    m->HandleGraphic->Flush(Gdiplus::FlushIntentionSync);
 
 
 
