@@ -442,7 +442,19 @@ Bool DrawExecute(Object draw)
 
 
 
-    Draw_Draw_Clip(draw, ClipLeft, ClipUp, clipWidth, clipHeight);
+    Int clipLeftInt;
+
+    clipLeftInt = (Int)ClipLeft;
+
+
+    Int clipUpInt;
+
+    clipUpInt = (Int)ClipUp;
+
+
+
+
+    Draw_Draw_Clip(draw, clipLeftInt, clipUpInt, clipWidth, clipHeight);
 
 
 
@@ -457,6 +469,20 @@ Bool DrawExecute(Object draw)
     SInt up;
 
     up = 100;
+
+
+
+    Int leftInt;
+
+    leftInt = (Int)left;
+
+
+
+    Int upInt;
+
+    upInt = (Int)up;
+
+
 
 
     Int width;
@@ -488,7 +514,7 @@ Bool DrawExecute(Object draw)
 
 
 
-    Draw_Draw_Rect(draw, left, up, width, height, Brush);
+    Draw_Draw_Rect(draw, leftInt, upInt, width, height, Brush);
 
 
 
@@ -508,7 +534,32 @@ Bool DrawExecute(Object draw)
     
 
 
-    Draw_Draw_Text(draw, Text, TextLength, Left + 600, Up + 850, 400, 200, Font, Brush);
+
+
+    SInt l;
+
+    l = Left + 600;
+    
+
+
+    SInt u;
+
+    u = Up + 850;
+
+
+
+    Int leftI;
+
+    leftI = (Int)l;
+
+
+    Int upI;
+
+    upI = (Int)u;
+
+
+
+    Draw_Draw_Text(draw, Text, TextLength, leftI, upI, 400, 200, Font, Brush);
 
 
 
