@@ -517,8 +517,8 @@ Bool Draw_Draw_Rect(Object o, Int left, Int up, Int width, Int height, Object br
 
 
 
-Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int destWidth, Int destHeight,
-    SInt sourceLeft, SInt sourceUp, Int sourceWidth, Int sourceHeight)
+Bool Draw_Draw_Image(Object o, Object image, Int destLeft, Int destUp, Int destWidth, Int destHeight,
+    Int sourceLeft, Int sourceUp, Int sourceWidth, Int sourceHeight)
 {
     Draw* m;
 
@@ -549,15 +549,27 @@ Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int des
 
 
 
+    SInt sourceLeftSInt;
+
+    sourceLeftSInt = (SInt)sourceLeft;
+
+
+
+    SInt sourceUpSInt;
+
+    sourceUpSInt = (SInt)sourceUp;
+
+
+
 
     int sourceL;
 
-    sourceL = (int)sourceLeft;
+    sourceL = (int)sourceLeftSInt;
 
 
     int sourceU;
 
-    sourceU = (int)sourceUp;
+    sourceU = (int)sourceUpSInt;
 
 
     int sourceW;
