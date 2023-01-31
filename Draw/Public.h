@@ -79,29 +79,29 @@ Bool Draw_Draw_Clear(Object o, Int color);
 
 
 Draw_Api
-Bool Draw_Draw_Rect(Object o, SInt left, SInt up, Int width, Int height, Object brush);
+Bool Draw_Draw_Rect(Object o, Int left, Int up, Int width, Int height, Object brush);
 
 
 
 
 
 Draw_Api
-Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush);
+Bool Draw_Draw_Text(Object o, Int text, Int length, Int destLeft, Int destUp, Int destWidth, Int destHeight, Object font, Object brush);
 
 
 
 
 
 Draw_Api
-Bool Draw_Draw_Image(Object o, Object image, SInt destLeft, SInt destUp, Int destWidth, Int destHeight,
-    SInt sourceLeft, SInt sourceUp, Int sourceWidth, Int sourceHeight);
+Bool Draw_Draw_Image(Object o, Object image, Int destLeft, Int destUp, Int destWidth, Int destHeight,
+    Int sourceLeft, Int sourceUp, Int sourceWidth, Int sourceHeight);
     
 
 
 
 
 Draw_Api
-Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height);
+Bool Draw_Draw_Clip(Object o, Int left, Int up, Int width, Int height);
 
 
 
