@@ -44,4 +44,4 @@ Draw_Draw_Method Draw_Draw_GetMethodAddress(Object o);
 
 
 
-Bool Draw_Draw_CreateRect(Gdiplus::Rect* result, SInt left, SInt up, Int width, Int height);
+Bool Draw_Draw_CreateRect(Gdiplus::Rect* result, Int left, Int up, Int width, Int height);
