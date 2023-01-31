@@ -681,7 +681,7 @@ Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, 
 
 
 
-Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height)
+Bool Draw_Draw_Clip(Object o, Int left, Int up, Int width, Int height)
 {
     Draw* m;
 
@@ -709,16 +709,29 @@ Bool Draw_Draw_Clip(Object o, SInt left, SInt up, Int width, Int height)
 
 
 
-Bool Draw_Draw_CreateRect(Gdiplus::Rect* result, SInt left, SInt up, Int width, Int height)
+Bool Draw_Draw_CreateRect(Gdiplus::Rect* result, Int left, Int up, Int width, Int height)
 {
+    SInt leftSInt;
+
+    leftSInt = (SInt)left;
+
+
+
+    SInt upSInt;
+
+    upSInt = (SInt)up;
+
+
+
+
     int l;
 
-    l = (int)left;
+    l = (int)leftSInt;
 
 
     int u;
 
-    u = (int)up;
+    u = (int)upSInt;
 
 
     int w;
