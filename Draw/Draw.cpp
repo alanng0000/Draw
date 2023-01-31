@@ -595,7 +595,7 @@ Bool Draw_Draw_Image(Object o, Object image, Int destLeft, Int destUp, Int destW
 
 
 
-Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, Int destWidth, Int destHeight, Object font, Object brush)
+Bool Draw_Draw_Text(Object o, Int text, Int length, Int destLeft, Int destUp, Int destWidth, Int destHeight, Object font, Object brush)
 {
     Draw* m;
 
@@ -625,15 +625,28 @@ Bool Draw_Draw_Text(Object o, Int text, Int length, SInt destLeft, SInt destUp, 
 
 
 
+    SInt destLeftSInt;
+
+    destLeftSInt = (SInt)destLeft;
+
+
+
+    SInt destUpSInt;
+
+    destUpSInt = (SInt)destUp;
+
+
+
+
     Gdiplus::REAL destLeftU;
 
-    destLeftU = (Gdiplus::REAL)destLeft;
+    destLeftU = (Gdiplus::REAL)destLeftSInt;
 
 
 
     Gdiplus::REAL destUpU;
 
-    destUpU = (Gdiplus::REAL)destUp;
+    destUpU = (Gdiplus::REAL)destUpSInt;
 
 
 
