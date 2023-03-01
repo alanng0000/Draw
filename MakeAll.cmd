@@ -2,7 +2,7 @@
 
 
 
-SET MethodsFilePath=..\Infra\MakeMethodList.cmd
+SET MethodFilePath=..\Infra\MakeMethod.cmd
 
 
 
@@ -18,7 +18,7 @@ SET OutFold=..\..\..\%OutFoldName%
 SET Module=Draw
 
 
-CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Infra.lib %OutFold%\Infra.Form.Infra.lib %OutFold%\Infra.Form.Windows.lib Gdiplus.lib" "1"
+CALL %MethodFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Infra.lib %OutFold%\Infra.Form.Infra.lib %OutFold%\Infra.Form.Windows.lib Gdiplus.lib" "1"
 
 
 
@@ -27,7 +27,7 @@ CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Infra.lib %O
 SET Module=Draw.Exe
 
 
-CALL %MethodsFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Draw.lib %OutFold%\Infra.lib %OutFold%\Infra.Form.Infra.lib %OutFold%\Infra.Form.Windows.lib" "" exe
+CALL %MethodFilePath% :MakeModule "%Module%" "%Module%" "%OutFold%\Draw.lib %OutFold%\Infra.lib %OutFold%\Infra.Form.Infra.lib %OutFold%\Infra.Form.Windows.lib" "" exe
 
 
 
